@@ -49,8 +49,7 @@
     <table>
       <tr>
           <th>Title</th>
-          <th>Likes</th>
-          <th></th>
+          <th>👍</th>
           <th></th>
           <th>User</th>
           <th></th>
@@ -60,14 +59,7 @@
       <tr>
      
         <td>{{show.title}}</td>
-        <td>
-            {% if show.like != 0 %}
-            {{show.like}}
-            {% endif %}
-
-        
-        
-        </td>
+     
         <td>
 
             {% if show.user_id != session['user_id'] %}
@@ -75,18 +67,18 @@
 
               {% if show.like == 0 %}
               <form action="/fun_like_show/{{show.id}}" method="POST">
-                <input class="ybutton" type="submit" name="like" value="Like" />
+                <input class="ybuttonlike" type="submit" name="like" value="Like" />
               </form>
               {% endif %} 
               
               {% if show.like == 1 %}
               <form action="/fun_unlike_show/{{show.id}}" method="POST">
                 <input
-                class="ybutton"
+                class="ybuttonlike1"
                   type="submit"
                   name="unlike"
-             
-                  value="UnLike"
+         
+                  value="👍"
                 />
               </form>
               {% endif %}
@@ -98,7 +90,7 @@
             <td>  
                 <div class="mod">
                     <form action="/show_one/{{show.id}}">
-                        <input class="ybutton" type="submit"  value="View" />
+                        <input class="ybuttonview" type="submit" value="View" />
                     </form>
                 </div>    
             </td>
@@ -107,7 +99,7 @@
              
             <td>
                 {% if show.user_id == session['user_id'] %}    
-            
+                ✅
             {% endif %}
                 {% if show.user_id != session['user_id'] %}    
                 {{show.user_id}}
@@ -119,7 +111,7 @@
 
                 <div class="mod">
                   <form action="/edit_one/{{show.id}}">
-                    <input class="ybutton" type="submit" value="Edit" />
+                    <input class="ybuttonedit" type="submit" value="Edit" />
                   </form>   
                 </div>      
                 {% endif %} 
@@ -130,10 +122,10 @@
                 <div class="mod">
                   <form action="/fun_delete_one/{{show.id}}" method="POST">
                     <input
-                    class="ybutton"
+                    class="ybuttondelete"
                       type="submit"
                       name="delete"
-             
+                     
                       value="Delete"
                     />
                   </form>
