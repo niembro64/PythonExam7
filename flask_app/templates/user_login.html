@@ -14,12 +14,6 @@
     <div id="top">
       <h4>Eric Niemeyer | Python Exam</h4>
       <div id="toplower">
-        <!-- <div id="tl"> -->
-        <!-- <a href="/user_login"><button class="xbutton">Login</button></a>
-        <a href="/show_all"
-          ><button type="submit" class="xbutton">Shows</button></a
-        >
-        <a href="/add_one"><button class="xbutton">Add</button></a> -->
         <form action="/user_login">
           <input class="xbutton" type="submit" value="Users" />
         </form>
@@ -29,8 +23,7 @@
         <form action="/add_one">
           <input class="xbutton" type="submit" value="Add Show" />
         </form>
-        <!-- </div> -->
-        <!-- <div id="tr"> -->
+
             <div id="rightacct">
                 {% if session['first_name'] != "" %}
                 <p>Hi {{session['first_name']}}!</p>
@@ -48,7 +41,7 @@
             </form>
         </div>
     </div>
-    <!-- <h1>Login</h1> -->
+ 
     <div id="main">
       <div class="unit">
         <h2 class="l">Login</h2>
