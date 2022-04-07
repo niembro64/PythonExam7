@@ -5,7 +5,6 @@
   --cB1: rgb(101, 96, 46);
   --cB2: rgba(101, 96, 46, 0.3);
 
-
   --cC1: rgb(69, 56, 122);
   --cC2: rgba(69, 56, 122, 0.1);
 
@@ -29,10 +28,13 @@
 }
 
 .flashes {
+  width: auto;
   font-style: italic;
 }
 .flashesli {
+  margin: 0px 0px 0px 20px; 
   color: rgb(155, 0, 0);
+  font-size: smaller;
 }
 
 body {
@@ -64,6 +66,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: var(--chover);
+  color: black;
 }
 
 input[type="submit"]:active {
@@ -85,7 +88,7 @@ input[type="submit"]:active {
 
 h1 {
   width: auto;
-  background: rgba(255, 255, 255, 0)
+  background: rgba(255, 255, 255, 0);
   /* margin: 15px;  */
 
   display: flex;
@@ -105,7 +108,7 @@ h4 {
   width: auto;
   /* background: var(--bg); */
   padding: 0;
-  margin: 0px 0px;
+  margin: 2px 0px 0px 0px;
   display: flex;
   align-items: center;
 }
@@ -151,6 +154,15 @@ h4 {
   margin: 5px 3px;
   border-radius: var(--borderradius);
 }
+.ybutton {
+  background-color: black;
+  border-color: var(--bordercolor);
+  color: white;
+  width: 100%;
+  padding: 5px 3px;
+  margin: 2px;
+  border-radius: var(--borderradius);
+}
 
 input,
 textarea {
@@ -158,13 +170,13 @@ textarea {
   /* background-color: var(--bg); */
   border-color: var(--bordercolor);
   padding: 5px;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 20px 5px 20px;
   border-radius: var(--borderradius);
   border-style: solid;
 }
 
 label {
-  padding: 15px 20px 3px 20px;
+  padding: 0px 20px 3px 20px;
 }
 
 form {
@@ -283,4 +295,34 @@ form {
   border: solid;
   border-radius: var(--borderradius);
   border-color: var(--bordercolor);
+}
+
+table {
+  border: solid;
+  border-color: var(--bordercolor);
+  /* border-radius: var(--borderradius); */
+  width: 98%;
+  border-collapse: collapse;
+}
+
+th {
+  height: 30px; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(
+    var(--cA2),
+    rgba(255, 255, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
+  /* border: solid;
+  border-color: var(--bordercolor); */
+}
+td {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* border: solid;
+  border-color: var(--bordercolor); */
 }

@@ -28,7 +28,7 @@
         <div id="rightacct">
           {% if session['first_name'] != "" %}
           <p>Hi {{session['first_name']}}!</p>
-          <p>Acct # 00{{session['user_id']}}</p>
+          <p>Acct # {{session['user_id']}}</p>
           {% endif %}
         </div>
         <form action="/log_out" method="POST">
@@ -44,72 +44,116 @@
     </div>
     <h1>All Shows</h1>
 
-    {% for show in all_shows %}
-
-    <div id="show_row">
-      <p>Created By User #{{show.user_id}}</p>
-      <p>| {{show.title}}</p>
-      <p>{{show.network}}</p>
-      <p>{{show.release_date}}</p>
-      <p>{{show.like}}</p>
-      <form action="/show_one/{{show.id}}">
-        <input type="submit" value="show" />
-      </form>
-      {% if show.user_id == session['user_id'] %}
-
-      <div class="mod">
-        <form action="/edit_one/{{show.id}}">
-          <input class="l" type="submit" id="edit" value="edit" />
-        </form>
-
-        <form action="/fun_delete_one/{{show.id}}" method="POST">
-          <input
-            class="r"
-            type="submit"
-            name="delete"
-            id="delete"
-            value="delete"
-          />
-        </form>
-      </div>
-
-      {% endif %} {% if show.user_id != session['user_id'] %}
-
-      <div class="like">
-        {% if show.like == 0 %}
-        <form action="/fun_like_show/{{show.id}}" method="POST">
-          <input class="x" type="submit" name="like" id="like" value="like" />
-        </form>
-        {% endif %} {% if show.like == 1 %}
-        <form action="/fun_unlike_show/{{show.id}}" method="POST">
-          <input
-            class="x"
-            type="submit"
-            name="unlike"
-            id="like"
-            value="unlike"
-          />
-        </form>
-        {% endif %}
-      </div>
-
-      {% endif %}
-    </div>
-    {% endfor %}
+ 
 
     <table>
       <tr>
-        <th>Added By</th>
-        <th>Title</th>
-        <th>Network</th>
+          <th>Title</th>
+          <th>Likes</th>
+          <th></th>
+          <th></th>
+          <th>User</th>
+          <th></th>
+          <th></th>
       </tr>
       {% for show in all_shows %}
       <tr>
-        <td>{{show.user_id}}</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
+     
+        <td>{{show.title}}</td>
+        <td>
+            {% if show.like != 0 %}
+            {{show.like}}
+            {% endif %}
+
+        
+        
+        </td>
+        <td>
+
+            {% if show.user_id != session['user_id'] %}
+            <div class="like">
+
+              {% if show.like == 0 %}
+              <form action="/fun_like_show/{{show.id}}" method="POST">
+                <input class="ybutton" type="submit" name="like" value="Like" />
+              </form>
+              {% endif %} 
+              
+              {% if show.like == 1 %}
+              <form action="/fun_unlike_show/{{show.id}}" method="POST">
+                <input
+                class="ybutton"
+                  type="submit"
+                  name="unlike"
+             
+                  value="UnLike"
+                />
+              </form>
+              {% endif %}
+
+            </div>
+            {% endif %}
+            
+            </td>
+            <td>  
+                <div class="mod">
+                    <form action="/show_one/{{show.id}}">
+                        <input class="ybutton" type="submit"  value="View" />
+                    </form>
+                </div>    
+            </td>
+
+
+             
+            <td>
+                {% if show.user_id == session['user_id'] %}    
+            
+            {% endif %}
+                {% if show.user_id != session['user_id'] %}    
+                {{show.user_id}}
+            {% endif %}
+            </td>
+ 
+            <td>
+                {% if show.user_id == session['user_id'] %}
+
+                <div class="mod">
+                  <form action="/edit_one/{{show.id}}">
+                    <input class="ybutton" type="submit" value="Edit" />
+                  </form>   
+                </div>      
+                {% endif %} 
+            </td>
+            <td>
+
+                {% if show.user_id == session['user_id'] %}
+                <div class="mod">
+                  <form action="/fun_delete_one/{{show.id}}" method="POST">
+                    <input
+                    class="ybutton"
+                      type="submit"
+                      name="delete"
+             
+                      value="Delete"
+                    />
+                  </form>
+                </div>      
+                {% endif %} 
+            
+            </td>
+          
+
+
+
+
+     
+
+
       </tr>
       {% endfor %}
+    </table>
+
+
     </table>
   </body>
 </html>
