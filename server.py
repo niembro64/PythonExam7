@@ -8,6 +8,7 @@ from flask_app.controllers import show_controller
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5002)
+    app.run(debug=True)
+#    app.run(debug=True, port=5002)
 
 # redbelted

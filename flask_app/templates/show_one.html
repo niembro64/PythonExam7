@@ -1,94 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="{{ url_for('static', filename='style.css') }}"
-        />
-        <title>Document</title>
-    </head>
-    <body>
-        <div id="top">
-            <div id="tl">
-                <a href="/index">index</a>
-                <a href="/user_login">user_login</a>
-                <a href="/show_all">show_all</a>
-                <a href="/add_one">add_one</a>
-            </div>
-            <div id="tr">
-                <p>
-                    user name: {{session['first_name']}}
-                    {{session['last_name']}}
-                </p>
-                <p>user number: {{session['user_id']}}</p>
-                <form action="/log_out" method="POST">
-                    <input
-                        class="r"
-                        type="submit"
-                        name="log_out"
-                        id="log_out"
-                        value="log_out"
-                    />
-                </form>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>Eric Niemeyer | Python Exam</h4>
+    <div id="top">
+      <div id="tl">
+        <a href="/index">index</a>
+        <a href="/user_login">user_login</a>
+        <a href="/show_all">show_all</a>
+        <a href="/add_one">add_one</a>
+      </div>
+      <div id="tr">
+        <p>user name: {{session['first_name']}} {{session['last_name']}}</p>
+        <p>user number: {{session['user_id']}}</p>
+        <form action="/log_out" method="POST">
+          <input
+            class="r"
+            type="submit"
+            name="log_out"
+            id="log_out"
+            value="log_out"
+          />
+        </form>
+      </div>
+    </div>
 
-        <h1>show_one</h1>
+    <h1>show_one</h1>
 
-        <div id="show_row">
-            <div id="ll">
-                <p>Posted By:</p>
-            </div>
-            <div id="rr">
-                <p>User ID: {{one_show.user.id}} |</p>
-                <p>{{one_show.user.first_name}} |</p>
-                <p>{{one_show.user.last_name}}</p>
-            </div>
-        </div>
-        <div id="show_row">
-            <div id="ll">
-                <p>Title:</p>
-            </div>
-            <div id="rr">
-                <p>{{one_show.title}}</p>
-            </div>
-        </div>
-        <div id="show_row">
-            <div id="ll">
-                <p>Network:</p>
-            </div>
-            <div id="rr">
-                <p>{{one_show.network}}</p>
-            </div>
-        </div>
-        <div id="show_row">
-            <div id="ll">
-                <p>Release Date:</p>
-            </div>
-            <div id="rr">
-                <p>{{one_show.release_date}}</p>
-            </div>
-        </div>
-        <div id="show_row">
-            <div id="ll">
-                <p>Description:</p>
-            </div>
-            <div id="rr">
-                <p>{{one_show.description}}</p>
-            </div>
-        </div>
+    <div id="show_row">
+      <div id="ll">
+        <p>Posted By:</p>
+      </div>
+      <div id="rr">
+        <p>User ID: {{one_show.user.id}} |</p>
+        <p>{{one_show.user.first_name}} |</p>
+        <p>{{one_show.user.last_name}}</p>
+      </div>
+    </div>
+    <div id="show_row">
+      <div id="ll">
+        <p>Title:</p>
+      </div>
+      <div id="rr">
+        <p>{{one_show.title}}</p>
+      </div>
+    </div>
+    <div id="show_row">
+      <div id="ll">
+        <p>Network:</p>
+      </div>
+      <div id="rr">
+        <p>{{one_show.network}}</p>
+      </div>
+    </div>
+    <div id="show_row">
+      <div id="ll">
+        <p>Release Date:</p>
+      </div>
+      <div id="rr">
+        <p>{{one_show.release_date}}</p>
+      </div>
+    </div>
+    <div id="show_row">
+      <div id="ll">
+        <p>Description:</p>
+      </div>
+      <div id="rr">
+        <p>{{one_show.description}}</p>
+      </div>
+    </div>
 
-        <div id="show_row">
-            <div id="ll">
-                <p>Number of Likes:</p>
-            </div>
-            <div id="rr">
-                <p>{{num_likes}}</p>
-            </div>
-        </div>
-    </body>
+    <div id="show_row">
+      <div id="ll">
+        <p>Number of Likes:</p>
+      </div>
+      <div id="rr">
+        <p>{{num_likes}}</p>
+      </div>
+    </div>
+  </body>
 </html>
