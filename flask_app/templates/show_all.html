@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='movie.png') }}"
+  />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -9,20 +13,20 @@
       type="text/css"
       href="{{ url_for('static', filename='style.css') }}"
     />
-    <title>02</title>
+    <title>Eric Niemeyer | Python | Users Like Shows</title>
   </head>
   <body>
     <div id="top">
-      <h4>Eric Niemeyer | Python Exam</h4>
+      <h4>Eric Niemeyer | Python Exam | AWS</h4>
       <div id="toplower">
         <form action="/user_login">
           <input class="xbutton" type="submit" value="Users" />
         </form>
         <form action="/show_all">
-          <input class="xbutton" type="submit" value="All Shows" />
+          <input class="xbutton" type="submit" value="🎞📽🎥" />
         </form>
         <form action="/add_one">
-          <input class="xbutton" type="submit" value="Add Show" />
+          <input class="xbutton" type="submit" value="📝" />
         </form>
 
         <div id="rightacct">
@@ -47,14 +51,14 @@
  
 
     <table>
-      <tr>
+      <!-- <tr>
           <th>Title</th>
-          <th>👍</th>
+          <th>❤️</th>
           <th></th>
           <th>User</th>
           <th></th>
           <th></th>
-      </tr>
+      </tr> -->
       {% for show in all_shows %}
       <tr>
      
@@ -62,12 +66,12 @@
      
         <td>
 
-            {% if show.user_id != session['user_id'] %}
+            <!-- {% if show.user_id != session['user_id'] %} -->
             <div class="like">
 
               {% if show.like == 0 %}
               <form action="/fun_like_show/{{show.id}}" method="POST">
-                <input class="ybuttonlike" type="submit" name="like" value="Like" />
+                <input class="ybuttonlike1" type="submit" name="like" value="🤍" />
               </form>
               {% endif %} 
               
@@ -78,19 +82,19 @@
                   type="submit"
                   name="unlike"
          
-                  value="👍"
+                  value="❤️"
                 />
               </form>
               {% endif %}
 
             </div>
-            {% endif %}
+            <!-- {% endif %} -->
             
             </td>
             <td>  
                 <div class="mod">
                     <form action="/show_one/{{show.id}}">
-                        <input class="ybuttonview" type="submit" value="View" />
+                        <input class="ybuttonview" type="submit" value="👁👓👁️‍🗨️🕶👓" />
                     </form>
                 </div>    
             </td>
@@ -111,7 +115,7 @@
 
                 <div class="mod">
                   <form action="/edit_one/{{show.id}}">
-                    <input class="ybuttonedit" type="submit" value="Edit" />
+                    <input class="ybuttonedit" type="submit" value="✎" />
                   </form>   
                 </div>      
                 {% endif %} 
@@ -126,7 +130,7 @@
                       type="submit"
                       name="delete"
                      
-                      value="Delete"
+                      value="✖"
                     />
                   </form>
                 </div>      
