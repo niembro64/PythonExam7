@@ -1,0 +1,28 @@
+@media only screen and (max-width: 700px) {
+  #goaway700 {
+    position: fixed;
+    left: -1000px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #goaway500 {
+    position: fixed;
+    left: -1000px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  #goaway300 {
+    position: fixed;
+    left: -1000px;
+  }
+}
+
+#qr {
+  image-rendering: pixelated;
+}
+#thumb {
+  image-rendering: crisp-edges;
+}
+#icon {
+  image-rendering: crisp-edges;
+}

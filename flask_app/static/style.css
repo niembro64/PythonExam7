@@ -38,6 +38,7 @@
 }
 
 body {
+  width: 100%; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -253,6 +254,9 @@ form {
   width: 100px;
   text-align: right;
   flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  /* align-items: center; */
 }
 
 .x {
@@ -269,6 +273,7 @@ form {
   padding: 0px 3px;
   margin: 1px 5px 1px 5px;
   border-radius: var(--borderradius);
+  font-size: large;
 }
 .ybuttonlike1 {
   background-color: rgba(0, 85, 255, 0);
@@ -280,6 +285,7 @@ form {
   padding: 0px 3px;
   margin: 1px 5px 1px 5px;
   border-radius: var(--borderradius);
+  font-size: large;
 }
 .ybuttonview {
   background-color: rgb(175, 105, 0);
@@ -291,6 +297,7 @@ form {
   padding: 0px 3px;
   margin: 1px 5px 1px 5px;
   border-radius: var(--borderradius);
+  font-size: large;
 }
 .ybuttonedit {
   background-color: rgb(8, 99, 0);
@@ -302,6 +309,7 @@ form {
   padding: 0px 3px;
   margin: 1px 5px 1px 5px;
   border-radius: var(--borderradius);
+  font-size: large;
 }
 .ybuttondelete {
   background-color: rgb(163, 0, 0);
@@ -313,6 +321,7 @@ form {
   padding: 0px 3px;
   margin: 1px 5px 1px 5px;
   border-radius: var(--borderradius);
+  font-size: large;
 }
 
 #show_row {
@@ -327,6 +336,7 @@ form {
   border: solid;
   border-color: var(--bordercolor);
   border-radius: var(--borderradius);
+  font-size: x-large;
 }
 
 #ll {
@@ -366,7 +376,6 @@ th {
   border: solid;
   border-color: var(--cC1);
   color: white;
-
 }
 td {
   justify-content: center;
@@ -375,4 +384,39 @@ td {
 
   /* border: solid;
   border-color: var(--bordercolor); */
+}
+
+/* .fit {
+  white-space: nowrap;
+  width: 500px;
+} */
+
+@media only screen and (max-width: 700px) {
+  #goaway {
+    position: fixed;
+    left: -1000px;
+  }
+}
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+} */
+
+#allprojects {
+  margin: 0px 0px 0px 15px;
+}
+
+#allprojectsbutton {
+  padding: 0px 5px 0px 5px;
+}
+
+#title {
+  overflow-wrap: break-word;
+
+}
+
+.table-fit {
+  width: 1px;
 }
