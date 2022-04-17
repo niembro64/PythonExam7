@@ -35,26 +35,26 @@
     <div
       class="d-flex justify-content-center flex-wrap align-items-center my-2"
     >
-    <div class="d-flex flex-row align-items-center">
-      {% if session['user_id'] > 0 %}
-      <span> {{session['user_id']}} 🟢 </span>
-      {% endif %} {% if session['user_id'] <= 0 %}
-      <span> ◯ </span>
-      {% endif %} {% if session['first_name'] != "" %}
-      <span> Hi {{session['first_name']}}! </span>
-      {% endif %} {% if session['first_name'] == "" %}
-      <span> Login Required </span>
-      {% endif %}
-      <form action="/log_out" method="POST">
-        <input
-          class="btn btn-danger mx-2"
-          type="submit"
-          name="log_out"
-          id="log_out"
-          value="Log Out"
-        />
-      </form>
-    </div>
+      <div class="d-flex flex-row align-items-center">
+        {% if session['user_id'] > 0 %}
+        <span> {{session['user_id']}} 🟢 </span>
+        {% endif %} {% if session['user_id'] <= 0 %}
+        <span> ◯ </span>
+        {% endif %} {% if session['first_name'] != "" %}
+        <span> Hi {{session['first_name']}}! </span>
+        {% endif %} {% if session['first_name'] == "" %}
+        <span> Login Required </span>
+        {% endif %}
+        <form action="/log_out" method="POST">
+          <input
+            class="btn btn-danger mx-2"
+            type="submit"
+            name="log_out"
+            id="log_out"
+            value="Log Out"
+          />
+        </form>
+      </div>
       <div class="btn-group mx-3 my-2" role="group">
         <a href="/show_all" class="btn btn-primary">Home</a>
         <a href="/add_one" class="btn btn-primary">+ Show</a>
@@ -115,7 +115,7 @@
         </td>
         <td class="align-middle">
           {{show.user_id}} {% if show.user_id == session['user_id'] %} 🟢 {%
-          endif %} {% if show.user_id != session['user_id'] %} ◯ {% endif %}
+          endif %} {% if show.user_id != session['user_id'] %}⚫️{% endif %}
         </td>
 
         <td class="align-middle">
