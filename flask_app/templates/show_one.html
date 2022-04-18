@@ -26,65 +26,76 @@
       <span class="align-middle"> Users Like Shows</span>
       <a
         class="btn btn-outline-dark btn-sm mx-2"
+        href=""
+        >About</a
+      >
+      <a
+        class="btn btn-outline-dark btn-sm mx-2"
         href="http://52.70.161.67/projects"
         >Eric Niemeyer Projects</a
       >
     </div>
     {% if session['first_name'] != "" %}
-    <div class="d-flex align-items-center my-2">
-      <div class="btn-group mx-3 my-2" role="group">
+    <div
+      class="d-flex justify-content-center flex-wrap align-items-center my-2"
+    >
+      <div class="d-flex flex-row align-items-center">
+        {% if session['user_id'] > 0 %}
+        <span> {{session['user_id']}} 🟢 </span>
+        {% endif %} {% if session['user_id'] <= 0 %}
+        <span> ◯ </span>
+        {% endif %} {% if session['first_name'] != "" %}
+        <span> Hi {{session['first_name']}}! </span>
+        {% endif %} {% if session['first_name'] == "" %}
+        <span> Login Required </span>
+        {% endif %}
+        <form action="/log_out" method="POST">
+          <input
+            class="btn btn-danger mx-2"
+            type="submit"
+            name="log_out"
+            id="log_out"
+            value="Log Out"
+          />
+        </form>
+      </div>
+      <div class="btn-group" role="group">
         <a href="/show_all" class="btn btn-primary">Home</a>
         <a href="/add_one" class="btn btn-primary">+ Show</a>
       </div>
-      {% if session['user_id'] > 0 %}
-      <span> {{session['user_id']}} 🟢 </span>
-      {% endif %} {% if session['user_id'] <= 0 %}
-      <span> ◯ </span>
-      {% endif %} {% if session['first_name'] != "" %}
-      <span> Hi {{session['first_name']}}! </span>
-      {% endif %} {% if session['first_name'] == "" %}
-      <span> Login Required </span>
-      {% endif %}
-      <form action="/log_out" method="POST">
-        <input
-          class="btn btn-danger mx-2"
-          type="submit"
-          name="log_out"
-          id="log_out"
-          value="Log Out"
-        />
-      </form>
     </div>
 
     {% endif %}
-    <h1>{{one_show.title}}</h1>
+    <h1 class="d-flex flex-wrap">{{one_show.title}}</h1>
 
     <table class="table table-hover w-97">
       <tr>
-        <td>User Added</td>
+        <td class="d-flex justify-content-end"><b>Added By</b></td>
         <td>
-          <span>User ID: {{one_show.user.id}}</span>
+          <span>
+            {{one_show.user.id}} {% if one_show.user.id == session['user_id'] %}
+            🟢 {% endif %} {% if one_show.user.id != session['user_id'] %}⚫️{%
+            endif %}</span
+          >
           <span>{{one_show.user.first_name}} {{one_show.user.last_name}}</span>
         </td>
       </tr>
       <tr>
-        <td>Network</td>
+        <td class="d-flex justify-content-end"><b>Network</b></td>
         <td>{{one_show.network}}</td>
       </tr>
       <tr>
-        <td>Release Date</td>
+        <td class="d-flex justify-content-end"><b>Release Date</b></td>
         <td>{{one_show.release_date}}</td>
       </tr>
       <tr>
-        <td>Description</td>
+        <td class="d-flex justify-content-end"><b>Description</b></td>
         <td>{{ one_show.description}}</td>
       </tr>
       <tr>
-        <td>Num Likes</td>
-        <td>{{num_likes}}</td>
+        <td class="d-flex justify-content-end"><b>Likes</b></td>
+        <td>{% for i in range(num_likes) %} ❤️ {% endfor %}</td>
       </tr>
     </table>
-
-    
   </body>
 </html>

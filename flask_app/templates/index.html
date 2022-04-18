@@ -22,41 +22,7 @@
     <title>Eric Niemeyer | Python | Users Like Shows</title>
   </head>
   <body class="d-flex flex-column align-items-center">
-    <div class="flex-row my-1">
-      <span class="align-middle"> Users Like Shows</span>
-      <a
-        class="btn btn-outline-dark btn-sm mx-2"
-        href="http://52.70.161.67/projects"
-        >Eric Niemeyer Projects</a
-      >
-    </div>
-    {% if session['first_name'] != "" %}
-    <div class="d-flex align-items-center my-2">
-      <div class="btn-group mx-3 my-2" role="group">
-        <a href="/show_all" class="btn btn-primary">Home</a>
-        <a href="/add_one" class="btn btn-primary">+ Show</a>
-      </div>
-      {% if session['user_id'] > 0 %}
-      <span> {{session['user_id']}} 🟢 </span>
-      {% endif %} {% if session['user_id'] <= 0 %}
-      <span> ◯ </span>
-      {% endif %} {% if session['first_name'] != "" %}
-      <span> Hi {{session['first_name']}}! </span>
-      {% endif %} {% if session['first_name'] == "" %}
-      <span> Login Required </span>
-      {% endif %}
-      <form action="/log_out" method="POST">
-        <input
-          class="btn btn-danger mx-2"
-          type="submit"
-          name="log_out"
-          id="log_out"
-          value="Log Out"
-        />
-      </form>
-    </div>
 
-    {% endif %}
     <h1>index</h1>
   </body>
 </html>

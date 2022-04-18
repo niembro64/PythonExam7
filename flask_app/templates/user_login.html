@@ -26,24 +26,29 @@
       <span class="align-middle"> Users Like Shows</span>
       <a
         class="btn btn-outline-dark btn-sm mx-2"
+        href=""
+        >About</a
+      >
+      <a
+        class="btn btn-outline-dark btn-sm mx-2"
         href="http://52.70.161.67/projects"
         >Eric Niemeyer Projects</a
       >
     </div>
- 
-    <div class="d-flex justify-content-between flex-wrap">
+
+    <div class="d-flex justify-content-center flex-wrap">
       <div class="d-flex flex-column mx-2">
         <h2>Login</h2>
-        <form class="d-flex flex-column" action="/login_user" method="POST">
-          <label for="l_email">Email:</label>
-          <input type="text" name="l_email" />
+        <form class="d-flex flex-column align-items-start" action="/login_user" method="POST">
+          <label for="l_email" autofocus>Email:</label>
+          <input type="text" name="l_email" value="johndoe@gmail.com"/>
           <label for="l_password">Password:</label>
-          <input type="password" name="l_password" />
+          <input type="password" name="l_password" value="password"/>
 
           {% with messages = get_flashed_messages("l") %} {% if messages %}
-          <ul class="flashes">
+          <ul class="text-danger">
             {% for message in messages %} {% if message[0] == "login" %}
-            <li class="flashesli">{{ message[1] }}</li>
+            <li class="text-danger">{{ message[1] }}</li>
             {% endif %} {% endfor %}
           </ul>
           {% endif %} {% endwith %}
@@ -59,7 +64,7 @@
       </div>
       <div class="d-flex flex-column mx-2">
         <h2 >New User</h2>
-        <form class="d-flex flex-column" action="/register_user" method="POST">
+        <form class="d-flex flex-column align-items-start"  action="/register_user" method="POST">
           <label for="r_first_name">First Name:</label>
           <input type="text" name="r_first_name" />
           <label for="r_last_name">Last Name:</label>
@@ -72,9 +77,9 @@
           <input type="password" name="r_confirm_password" />
           <div>
             {% with messages = get_flashed_messages("r") %} {% if messages %}
-            <ul class="flashes">
+            <ul class="text-danger">
               {% for message in messages %} {% if message[0] == "register" %}
-              <li class="flashesli">{{ message[1] }}</li>
+              <li class="text-danger">{{ message[1] }}</li>
               {% endif %} {% endfor %}
             </ul>
             {% endif %} {% endwith %}
