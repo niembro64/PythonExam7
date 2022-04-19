@@ -34,14 +34,15 @@ class Show:
     
     @classmethod
     def get_all_shows_join_likes(cls, data):
-        m = "get_all_shows_join_likes"
-        Show.p(m)       
+        # m = "get_all_shows_join_likes"
+        # Show.p(m)       
         # query = "SELECT * FROM likes LEFT JOIN shows ON likes.show_id = shows.id WHERE likes.user_id NOT Null;"
-        query = "SELECT * FROM shows LEFT JOIN likes ON likes.show_id = shows.id LEFT JOIN users ON users.id = %(user_id)s;"
+        # query = "SELECT * FROM shows LEFT JOIN likes ON likes.show_id = shows.id LEFT JOIN users ON users.id = %(user_id)s;"
+        query = "SELECT * FROM shows LEFT JOIN (SELECT * FROM likes WHERE likes.user_id = %(user_id)s) AS likes ON shows.id = likes.show_id LEFT JOIN users ON users.id = likes.user_id;"
         results = connectToMySQL(db_name).query_db(query, data)
         all_shows_and_user_like = []
         for row in results:
-            Show.p(row)
+            # Show.p(row)
             one_show = cls(row)
             # if row.user_id != NULL:
             #     user_data = {

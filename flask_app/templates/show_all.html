@@ -25,11 +25,7 @@
   <body class="d-flex flex-column align-items-center">
     <div class="flex-row my-1">
       <span class="align-middle"> Users Like Shows</span>
-      <a
-        class="btn btn-outline-dark btn-sm mx-2"
-        href=""
-        >About</a
-      >
+      <a class="btn btn-outline-dark btn-sm mx-2" href="">About</a>
       <a
         class="btn btn-outline-dark btn-sm mx-2"
         href="http://52.70.161.67/projects"
@@ -40,12 +36,16 @@
     <div
       class="d-flex justify-content-center flex-wrap align-items-center my-2"
     >
+      <div class="btn-group" role="group">
+        <a href="/show_all" class="btn btn-primary">Home</a>
+        <a href="/add_one" class="btn btn-primary">+ Show</a>
+      </div>
       <div class="d-flex flex-row align-items-center">
-        {% if session['user_id'] > 0 %}
-        <span> {{session['user_id']}} 🟢 </span>
-        {% endif %} {% if session['user_id'] <= 0 %}
-        <span> ◯ </span>
-        {% endif %} {% if session['first_name'] != "" %}
+        <span class="mx-2">
+          {% if session['user_id'] > 0 %}#{{session['user_id']}} {% endif %} {%
+          if session['user_id'] <= 0 %} {% endif %}
+        </span>
+        {% if session['first_name'] != "" %}
         <span> Hi {{session['first_name']}}! </span>
         {% endif %} {% if session['first_name'] == "" %}
         <span> Login Required </span>
@@ -60,94 +60,91 @@
           />
         </form>
       </div>
-      <div class="btn-group" role="group">
-        <a href="/show_all" class="btn btn-primary">Home</a>
-        <a href="/add_one" class="btn btn-primary">+ Show</a>
-      </div>
     </div>
 
     {% endif %}
     <h1>All Shows</h1>
 
     <table class="table table-hover">
-      <!-- <tr class="head">
-        <th>Title</th>
-        <th>❤️</th>
-        <th></th>
-        <th>User</th>
-        <th></th>
-        <th></th>
-      </tr> -->
-      {% for show in all_shows %}
-      <tr>
-        <td class="align-middle">
-          <span id="title" class="text-break" style="min-width: 66px"
-            >{{show.title}}</span
-          >
-        </td>
+      <thead>
+        <tr class="head">
+          <th>Title</th>
+          <th>Like</th>
+          <th>View</th>
 
-        <td class="table-fit align-middle">
-          <!-- {% if show.user_id != session['user_id'] %} -->
-          <div class="like">
-            {% if show.like == 0 %}
-            <form action="/fun_like_show/{{show.id}}" method="POST">
-              <input
-                class="btn btn-outline-link mx-0"
-                type="submit"
-                name="like"
-                value="🤍"
-              />
-            </form>
-            {% endif %} {% if show.like == 1 %}
-            <form action="/fun_unlike_show/{{show.id}}" method="POST">
-              <input
-                class="btn btn-outline-link mx-0"
-                type="submit"
-                name="unlike"
-                value="❤️"
-              />
-            </form>
-            {% endif %}
-          </div>
-          <!-- {% endif %} -->
-        </td>
-        <td class="align-middle">
-          <div class="mod">
-            <form action="/show_one/{{show.id}}">
-              <input class="btn btn-warning mx-0" type="submit" value="👓" />
-            </form>
-          </div>
-        </td>
-        <td class="align-middle">
-          {{show.user_id}} {% if show.user_id == session['user_id'] %} 🟢 {%
-          endif %} {% if show.user_id != session['user_id'] %}⚫️{% endif %}
-        </td>
+          <th>Added By</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for show in all_shows %}
+        <tr>
+          <td class="align-middle">
+            <span id="title" class="text-break" style="min-width: 66px"
+              >{{show.title}}</span
+            >
+          </td>
 
-        <td class="align-middle">
-          <div class="btn-group" role="group">
-            {% if show.user_id == session['user_id'] %}
-
-            <div class="mod">
-              <form action="/edit_one/{{show.id}}">
-                <input class="btn btn-success mx-0" type="submit" value="✎" />
-              </form>
-            </div>
-            {% endif %} {% if show.user_id == session['user_id'] %}
-            <div class="mod">
-              <form action="/fun_delete_one/{{show.id}}" method="POST">
+          <td class="table-fit align-middle">
+            <!-- {% if show.user_id != session['user_id'] %} -->
+            <div class="like">
+              {% if show.like == 0 %}
+              <form action="/fun_like_show/{{show.id}}" method="POST">
                 <input
-                  class="btn btn-danger mx-1"
+                  class="btn btn-outline-link mx-0"
                   type="submit"
-                  name="delete"
-                  value="✖"
+                  name="like"
+                  value="🤍"
                 />
               </form>
+              {% endif %} {% if show.like == 1 %}
+              <form action="/fun_unlike_show/{{show.id}}" method="POST">
+                <input
+                  class="btn btn-outline-link mx-0"
+                  type="submit"
+                  name="unlike"
+                  value="❤️"
+                />
+              </form>
+              {% endif %}
             </div>
-            {% endif %}
-          </div>
-        </td>
-      </tr>
-      {% endfor %}
+            <!-- {% endif %} -->
+          </td>
+          <td class="align-middle">
+            <div class="mod">
+              <form action="/show_one/{{show.id}}">
+                <input class="btn btn-warning mx-0" type="submit" value="👓" />
+              </form>
+            </div>
+          </td>
+          <td class="text-center">
+            {% if show.user_id == session['user_id'] %}{% endif %} {% if
+            show.user_id != session['user_id'] %}#{{show.user_id}}{% endif %}
+
+            <div class="btn-group" role="group">
+              {% if show.user_id == session['user_id'] %}
+
+              <div class="mod">
+                <form action="/edit_one/{{show.id}}">
+                  <input class="btn btn-success mx-0" type="submit" value="✎" />
+                </form>
+              </div>
+              {% endif %} {% if show.user_id == session['user_id'] %}
+              <div class="mod">
+                <form action="/fun_delete_one/{{show.id}}" method="POST">
+                  <input
+                    class="btn btn-danger mx-1"
+                    type="submit"
+                    name="delete"
+                    value="✖"
+                  />
+                </form>
+              </div>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
   </body>
 </html>

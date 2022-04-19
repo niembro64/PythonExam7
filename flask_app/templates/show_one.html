@@ -24,11 +24,7 @@
   <body class="d-flex flex-column align-items-center">
     <div class="flex-row my-1">
       <span class="align-middle"> Users Like Shows</span>
-      <a
-        class="btn btn-outline-dark btn-sm mx-2"
-        href=""
-        >About</a
-      >
+      <a class="btn btn-outline-dark btn-sm mx-2" href="">About</a>
       <a
         class="btn btn-outline-dark btn-sm mx-2"
         href="http://52.70.161.67/projects"
@@ -39,12 +35,16 @@
     <div
       class="d-flex justify-content-center flex-wrap align-items-center my-2"
     >
+      <div class="btn-group" role="group">
+        <a href="/show_all" class="btn btn-primary">Home</a>
+        <a href="/add_one" class="btn btn-primary">+ Show</a>
+      </div>
       <div class="d-flex flex-row align-items-center">
-        {% if session['user_id'] > 0 %}
-        <span> {{session['user_id']}} 🟢 </span>
-        {% endif %} {% if session['user_id'] <= 0 %}
-        <span> ◯ </span>
-        {% endif %} {% if session['first_name'] != "" %}
+        <span class="mx-2">
+          {% if session['user_id'] > 0 %}#{{session['user_id']}} {% endif %} {%
+          if session['user_id'] <= 0 %} {% endif %}
+        </span>
+        {% if session['first_name'] != "" %}
         <span> Hi {{session['first_name']}}! </span>
         {% endif %} {% if session['first_name'] == "" %}
         <span> Login Required </span>
@@ -59,43 +59,46 @@
           />
         </form>
       </div>
-      <div class="btn-group" role="group">
-        <a href="/show_all" class="btn btn-primary">Home</a>
-        <a href="/add_one" class="btn btn-primary">+ Show</a>
-      </div>
     </div>
 
     {% endif %}
     <h1 class="d-flex flex-wrap">{{one_show.title}}</h1>
 
     <table class="table table-hover w-97">
-      <tr>
-        <td class="d-flex justify-content-end"><b>Added By</b></td>
-        <td>
-          <span>
-            {{one_show.user.id}} {% if one_show.user.id == session['user_id'] %}
-            🟢 {% endif %} {% if one_show.user.id != session['user_id'] %}⚫️{%
-            endif %}</span
-          >
-          <span>{{one_show.user.first_name}} {{one_show.user.last_name}}</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="d-flex justify-content-end"><b>Network</b></td>
-        <td>{{one_show.network}}</td>
-      </tr>
-      <tr>
-        <td class="d-flex justify-content-end"><b>Release Date</b></td>
-        <td>{{one_show.release_date}}</td>
-      </tr>
-      <tr>
-        <td class="d-flex justify-content-end"><b>Description</b></td>
-        <td>{{ one_show.description}}</td>
-      </tr>
-      <tr>
-        <td class="d-flex justify-content-end"><b>Likes</b></td>
-        <td>{% for i in range(num_likes) %} ❤️ {% endfor %}</td>
-      </tr>
+      <thead>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="text-end"><b>Added By</b></td>
+          <td>
+            <span>
+              #{{one_show.user.id}} {% if one_show.user.id == session['user_id']
+              %} • You!{% endif %} {% if one_show.user.id != session['user_id']
+              %} • {{one_show.user.first_name}} {{one_show.user.last_name}} {%
+              endif %}</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td class="text-end"><b>Network</b></td>
+          <td>{{one_show.network}}</td>
+        </tr>
+        <tr>
+          <td class="text-end"><b>Release Date</b></td>
+          <td>{{one_show.release_date}}</td>
+        </tr>
+        <tr>
+          <td class="text-end"><b>Description</b></td>
+          <td>{{ one_show.description}}</td>
+        </tr>
+        <tr>
+          <td class="text-end"><b>Likes</b></td>
+          <td>
+            {% for i in range(num_likes) %} ❤️ {% endfor %}{% if num_likes == 0
+            %}✖{% endif %}
+          </td>
+        </tr>
+      </tbody>
     </table>
   </body>
 </html>
