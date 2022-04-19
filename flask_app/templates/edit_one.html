@@ -23,10 +23,10 @@
   </head>
   <body class="d-flex flex-column align-items-center">
     <div class="flex-row my-1">
-      <span class="align-middle"> Users Like Shows</span>
-      <a class="btn btn-outline-dark btn-sm mx-2" href="">About</a>
+
+      <a class="btn btn-light btn-sm px-3 mx-2" href="">About Users Like Shows</a>
       <a
-        class="btn btn-outline-dark btn-sm mx-2"
+        class="btn btn-light btn-sm px-3 mx-2"
         href="http://52.70.161.67/projects"
         >Eric Niemeyer Projects</a
       >
@@ -41,8 +41,8 @@
       </div>
       <div class="d-flex flex-row align-items-center">
         <span class="mx-2">
-          {% if session['user_id'] > 0 %}#{{session['user_id']}}  {% endif %}
-          {% if session['user_id'] <= 0 %}  {% endif %}
+          {% if session['user_id'] > 0 %}#{{session['user_id']}} {% endif %} {%
+          if session['user_id'] <= 0 %} {% endif %}
         </span>
         {% if session['first_name'] != "" %}
         <span> Hi {{session['first_name']}}! </span>
