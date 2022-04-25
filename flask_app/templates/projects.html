@@ -25,9 +25,9 @@
   </head>
   <body>
     <div class="d-flex align-items-center justify-content-center flex-row">
-      <div class="d-flex align-items-center flex-column">
+      <div class="d-flex align-items-center flex-column py-4">
         <h1>Eric Niemeyer</h1>
-        <p>deployed projects</p>
+        <p>full-stack projects deployed on AWS</p>
       </div>
       <img
         id="qr"
@@ -48,7 +48,7 @@
           <th scope="col" class="text-center">Stack</th>
 
           <th id="goaway500" scope="col" class="text-center">User Stories</th>
-          <th id="goaway700" scope="col" class="text-center">Study</th>
+          <th id="goaway700" scope="col" class="text-center">Features</th>
         </tr>
       </thead>
       <tbody>
@@ -90,6 +90,15 @@
             />
           </td>
           <td>
+            <div class="d-flex align-items-center justify-content-center py-2">
+              <img
+                id="thumb"
+                src="../static/react.png"
+                class="rounded"
+                alt="x"
+                width="50"
+              />
+            </div>
             <ul>
               <li>React</li>
               <li>Express</li>
@@ -166,6 +175,15 @@
           </td>
 
           <td>
+            <div class="d-flex align-items-center justify-content-center py-2">
+              <img
+                id="thumb"
+                src="../static/python.png"
+                class="rounded"
+                alt="x"
+                width="40"
+              />
+            </div>
             <ul>
               <li>Python</li>
               <li>Flask</li>
@@ -211,6 +229,100 @@
                   <li>Session</li>
                 </ul>
               </li>
+              <li>Encrypted Passwords</li>
+            </ul>
+          </td>
+        </tr>
+        <tr class="align-middle">
+          <td>
+            <a
+              class="btn btn-primary d-grid d-flex align-items-center flex-column"
+              href="http://100.24.125.113/"
+            >
+              <img
+                id="icon"
+                class="border border-dark rounded"
+                src="../static/event.png"
+                alt="x"
+                width="32"
+                height="32"
+              />
+
+              Users RSVP Events
+              <!-- <span
+                ><small><i>work in progress</i></small></span
+              > -->
+            </a>
+          </td>
+          <td id="goaway700">
+            <img
+              id="qr"
+              class="border border-dark rounded p-1 bg-white"
+              src="../static/100.24.125.113.png"
+              alt="x"
+              width="60"
+              height="60"
+            />
+          </td>
+          <td id="goaway300">
+            <img
+              id="thumb"
+              src="../static/thumb_event.jpg"
+              class="border border-dark rounded"
+              alt="x"
+              height="150"
+            />
+          </td>
+
+          <td>
+            <div class="d-flex align-items-center justify-content-center py-2">
+              <img
+                id="thumb"
+                src="../static/csharp.png"
+                class="rounded"
+                alt="x"
+                width="50"
+              />
+            </div>
+            <ul>
+              <li>C#</li>
+              <li>ASP.NET</li>
+              <li>MySQL</li>
+              <li>EF Core</li>
+            </ul>
+          </td>
+          <td id="goaway500">
+            <ul>
+              <li>
+                Accounts
+                <ul>
+                  <li>Register</li>
+                  <li>Log-in</li>
+                </ul>
+              </li>
+              <li>
+                Events
+                <ul>
+                  <li>CRUD</li>
+                  <li>View host</li>
+                  <li>RSVP</li>
+                  <li>View attendees</li>
+                </ul>
+              </li>
+            </ul>
+          </td>
+          <td id="goaway700">
+            Users can both create shows and RSVP shows, using C# aspnet core's
+            ORM toolset.
+            <ul>
+              <li>
+                Users-Events Double Relationship
+                <ul>
+                  <li>Create is <i>One-to-Many</i></li>
+                  <li>RSVP is <i>Many-to-Many</i></li>
+                </ul>
+              </li>
+              <li>Validations</li>
               <li>Encrypted Passwords</li>
             </ul>
           </td>
