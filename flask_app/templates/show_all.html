@@ -24,8 +24,9 @@
   </head>
   <body class="d-flex flex-column align-items-center">
     <div class="flex-row my-1">
-
-      <a class="btn btn-light btn-sm px-3 mx-2" href="">About Users Like Shows</a>
+      <a class="btn btn-light btn-sm px-3 mx-2" href=""
+        >About Users Like Shows</a
+      >
       <a
         class="btn btn-light btn-sm px-3 mx-2"
         href="http://52.70.161.67/projects"
@@ -63,7 +64,7 @@
     </div>
 
     {% endif %}
-    <h1>Users Like Shows</h1>
+    <h1 class="my-2">Users Like Shows</h1>
 
     <table class="table table-hover">
       <thead>
@@ -71,8 +72,7 @@
           <th>Title</th>
           <th>Like</th>
           <th>View</th>
-
-          <th>Added By</th>
+          <th><p class="text-center p-0 m-0">Creator</p></th>
         </tr>
       </thead>
       <tbody>
@@ -84,7 +84,7 @@
             >
           </td>
 
-          <td class="table-fit align-middle">
+          <td class="align-middle">
             <!-- {% if show.user_id != session['user_id'] %} -->
             <div class="like">
               {% if show.like == 0 %}

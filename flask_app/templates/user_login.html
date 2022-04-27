@@ -33,14 +33,19 @@
       >
     </div>
 
+    <h1 class="my-2">Users Like Shows</h1>
     <div class="d-flex justify-content-center flex-wrap">
       <div class="d-flex flex-column mx-2">
-        <h2>Login</h2>
-        <form class="d-flex flex-column align-items-start" action="/login_user" method="POST">
+        <h3>Login</h3>
+        <form
+          class="d-flex flex-column align-items-start"
+          action="/login_user"
+          method="POST"
+        >
           <label for="l_email" autofocus>Email:</label>
-          <input type="text" name="l_email" value="johndoe@gmail.com"/>
+          <input type="text" name="l_email" value="johndoe@gmail.com" />
           <label for="l_password">Password:</label>
-          <input type="password" name="l_password" value="password"/>
+          <input type="password" name="l_password" value="password" />
 
           {% with messages = get_flashed_messages("l") %} {% if messages %}
           <ul class="text-danger">
@@ -60,8 +65,12 @@
         </form>
       </div>
       <div class="d-flex flex-column mx-2">
-        <h2 >New User</h2>
-        <form class="d-flex flex-column align-items-start"  action="/register_user" method="POST">
+        <h3>New User</h3>
+        <form
+          class="d-flex flex-column align-items-start"
+          action="/register_user"
+          method="POST"
+        >
           <label for="r_first_name">First Name:</label>
           <input type="text" name="r_first_name" />
           <label for="r_last_name">Last Name:</label>
