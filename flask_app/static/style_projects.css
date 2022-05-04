@@ -16,12 +16,16 @@
     left: -1000px;
   }
 }
+.thumbHolder{
+  max-width: 150px; 
+}
 
 #qr {
   image-rendering: pixelated;
 }
 #thumb {
   image-rendering: crisp-edges;
+  /* max-width: 50px;  */
 }
 #icon {
   image-rendering: crisp-edges;
