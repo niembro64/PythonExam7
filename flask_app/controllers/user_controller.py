@@ -19,7 +19,7 @@ def start():
 def root():
     m = "root"
     User.p(m)
-    return redirect("/user_login")
+    return redirect("/projects")
 
 
 @app.route("/index")
