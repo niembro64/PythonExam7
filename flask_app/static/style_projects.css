@@ -16,8 +16,8 @@
     left: -1000px;
   }
 }
-.thumbHolder{
-  max-width: 150px; 
+.thumbHolder {
+  max-width: 150px;
 }
 
 #qr {
@@ -29,4 +29,15 @@
 }
 #icon {
   image-rendering: crisp-edges;
+}
+
+#thumb:active {
+  /* position:relative; */
+  /* top:-25px; */
+  /* left:-55px; */
+  width: auto;
+  height: 300px;
+  /* display:block; */
+  /* z-index: 999; */
+  /* border: 3px dashed black; */
 }

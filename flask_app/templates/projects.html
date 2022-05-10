@@ -23,20 +23,35 @@
     />
     <title>Eric Niemeyer | Projects</title>
   </head>
-  <body>
+  <body class="d-flex align-items-center justify-content-center flex-column">
     <div class="d-flex align-items-center justify-content-center flex-row">
-      <div class="d-flex align-items-center flex-column py-4">
+      <div class="d-flex align-items-center flex-column py-0">
         <h1>Eric Niemeyer</h1>
         <p>Full-stack projects deployed on AWS</p>
       </div>
       <img
         id="qr"
-        class="border border-dark rounded p-1 mx-3 bg-white"
+        class="border border-dark rounded p-1 mx-3 bg-white shadow"
         src="../static/http___niembro64.com.png"
         alt="x"
         width="60"
         height="60"
       />
+    </div>
+    <div class="d-flex align-items-center justify-content-center flex-row pb-4">
+      <a class="btn btn-light mx-1 shadow" href="../static/Engineering Resume of Eric Michael Niemeyer Rev 49.pdf" download>
+        <img id="qr" src="../static/dl.png" alt="x" width="14" height="14" />
+
+        <b>Resume</b></a
+      >
+      <a class="btn btn-light mx-1 shadow" href="https://github.com/niembro64"
+        ><img src="../static/GitHub_Logo.png" height="20" alt=""
+      /></a>
+      <a
+        class="btn btn-light mx-1 shadow"
+        href="https://www.linkedin.com/in/eric-niemo/"
+        ><img src="../static/Linkedin-logo-png.png" height="18" alt=""
+      /></a>
     </div>
     <table class="table table-hover">
       <thead>
@@ -105,13 +120,16 @@
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
-     
             </ul>
           </td>
           <td id="goaway500">
             <ul></ul>
           </td>
-          <td id="goaway700">Fun with the web standard: HTML, CSS, and vanilla JavaScript. Exercises built without any special libraries for a desktop experience.</td>
+          <td id="goaway700">
+            Fun with the web standard: HTML, CSS, and vanilla JavaScript.
+            Exercises built without any special libraries for a desktop
+            experience.
+          </td>
         </tr>
         <tr class="align-middle">
           <td>
@@ -198,19 +216,26 @@
             Users can both create shows and RSVP shows, using C# aspnet core's
             ORM toolset.
             <ul>
-              <li>
+              <!-- <li>
                 Users-Events Double Relationship
                 <ul>
                   <li>Create is <i>One-to-Many</i></li>
                   <li>RSVP is <i>Many-to-Many</i></li>
                 </ul>
-              </li>
-              <li>Validations</li>
+              </li> -->
+              <li>Standard & Custom Form Validations</li>
               <li>Encrypted Passwords</li>
             </ul>
+            <img
+              id="thumb"
+              src="../static/erd_events.png"
+              class="border border-dark rounded"
+              height="150"
+              alt=""
+            />
           </td>
         </tr>
-     
+
         <tr class="align-middle">
           <td>
             <a
@@ -386,22 +411,29 @@
             Users can both create shows and like shows; a study in non-trivial
             database schema planning and implementation.
             <ul>
-              <li>
+              <!-- <li>
                 Users-Shows Double Relationship
                 <ul>
                   <li>Create is <i>One-to-Many</i></li>
                   <li>Like is <i>Many-to-Many</i></li>
                 </ul>
-              </li>
+              </li> -->
               <li>
-                Validations
-                <ul>
+                Validations | Back-end & Session
+                <!-- <ul>
                   <li>Back-end</li>
                   <li>Session</li>
-                </ul>
+                </ul> -->
               </li>
               <li>Encrypted Passwords</li>
             </ul>
+            <img
+              id="thumb"
+              src="../static/erd_shows.png"
+              class="border border-dark rounded"
+              height="120"
+              alt=""
+            />
           </td>
         </tr>
       </tbody>
