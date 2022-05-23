@@ -55,6 +55,24 @@ body {
     image-rendering: crisp-edges;
 }
 
+<<<<<<< HEAD
+#thumb:hover {
+  /* position:relative; */
+  /* top:-25px; */
+  /* left:-55px; */
+  width: auto;
+  height: 250px;
+  /* display:block; */
+  z-index: 999;
+  /* border: 3px dashed black; */
+}
+
+.endblock {
+  width: 100px;
+  height: 200px;
+  /* border: 1px black solid; */
+}
+=======
 #thumb:active {
     /* position:relative; */
     /* top:-25px; */
@@ -140,3 +158,4 @@ h3 {
 p{
   padding: 0px; 
 }
+>>>>>>> daf044586a2046f17d0e69bb4242f8fdc324fbc9
