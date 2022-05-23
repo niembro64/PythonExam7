@@ -56,7 +56,7 @@ body {
 }
 
 
-#thumb:hover {
+#thumb:active {
   /* position:relative; */
   /* top:-25px; */
   /* left:-55px; */
