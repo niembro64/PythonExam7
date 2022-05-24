@@ -159,10 +159,10 @@ p{
     color: white;
     
     box-shadow: 0 0 10px black;
-    transition: 1s ease; 
+    transition: 3s ease, box-shadow 1s ease; 
     /* border-bottom: 1px solid black;  */
 }
 #top:hover{
     box-shadow: 0 0 30px rgb(13, 110, 253);
-
+    transition: 1s ease, box-shadow .1s ease; 
 }
