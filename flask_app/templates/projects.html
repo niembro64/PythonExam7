@@ -39,22 +39,14 @@
                 id="glow"
                 class="d-flex align-items-center flex-column p-0 m-0"
             >
-            <h3>Eric Niemeyer</h3>
+                <h3>Eric Niemeyer</h3>
                 <span>Full-Stack Projects</span>
             </div>
         </div>
         <div
             id="butnz"
-            class="d-flex align-items-center justify-content-center flex-row pb-4"
+            class="d-flex align-items-center justify-content-center flex-row"
         >
-            <img
-                id="goaway500"
-                class="border border-dark rounded p-1 mx-3 my-0 bg-white"
-                src="../static/http___niembro64.com.png"
-                alt="x"
-                width="60"
-                height="60"
-            />
             <a
                 class="bbb"
                 href="../static/Resume of Eric Michael Niemeyer _ Full Stack Developer _ Stamford CT _ Rev 63-min.pdf"
@@ -77,15 +69,28 @@
             <a class="bbb" href="https://www.linkedin.com/in/eric-niemo/"
                 ><img src="../static/Linkedin-logo-png.png" height="18" alt=""
             /></a>
+            <img
+                id="goaway500"
+                class="border border-dark rounded p-1 mx-3 my-0 bg-white"
+                src="../static/http___niembro64.com.png"
+                alt="x"
+                width="80"
+                height="80"
+            />
         </div>
         <div id="tablediv">
-            <table class="table table-light table-borderless">
+            <table
+                id="thhh"
+                class="table table-light table-striped table-hover table-borderless"
+            >
                 <thead class="table text-dark">
                     <tr>
-                        <th scope="col" class="text-center"></th>
-                        <th id="goaway700" scope="col"></th>
-
+                        <th scope="col" id="goaway500" class="text-center"></th>
                         <th id="goaway300" scope="col"></th>
+
+                        <th  class="text-center" scope="col">
+                            Project
+                        </th>
                         <th scope="col" class="text-center">Stack</th>
 
                         <th id="goaway500" scope="col" class="text-center">
@@ -96,18 +101,17 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="rounded">
                     <tr class="align-middle">
-                        <td id="goaway700" class="bg-transparent">
-                            <img src="../static/dtb.png" alt="x" width="60" />
-                            <!-- <img
-                            id="qr"
-                            class="border border-dark rounded p-1 bg-white"
-                            src="../static/http___design.niembro64.com.png"
-                            alt="x"
-                            width="60"
-                            height="60"
-                        /> -->
+                        <td id="goaway500">
+                            <img
+                                id="icon"
+                                class="border border-dark rounded"
+                                src="../static/desktop_icon.png"
+                                alt="x"
+                                width="32"
+                                height="32"
+                            />
                         </td>
                         <td id="goaway300" class="h-150 bg-transparent">
                             <img
@@ -118,23 +122,18 @@
                                 height="150"
                             />
                         </td>
-                        <td class="bg-transparent">
+                        <td>
                             <a
                                 class="btn btn-primary d-grid d-flex align-items-center flex-column"
                                 href="http://design.niembro64.com/"
                             >
-                                <!-- <span
-                                ><small><i>Desktop</i></small></span
-                            > -->
                                 <img
-                                    id="icon"
-                                    class="border border-dark rounded"
-                                    src="../static/desktop_icon.png"
+                                    src="../static/dtb.png"
                                     alt="x"
-                                    width="32"
-                                    height="32"
+                                    height="40"
                                 />
-                                <span>Design</span>
+
+                                <span class="ttt">Design</span>
                             </a>
                         </td>
                         <td>
@@ -166,8 +165,15 @@
                         </td>
                     </tr>
                     <tr class="align-middle">
-                        <td id="goaway700" class="bg-transparent">
-                            <img src="../static/dmtb.png" alt="x" width="60" />
+                        <td id="goaway500">
+                            <img
+                                id="icon"
+                                class="border border-dark rounded"
+                                src="../static/party.png"
+                                alt="x"
+                                width="32"
+                                height="32"
+                            />
                             <!-- <img
                             id="qr"
                             class="border border-dark rounded p-1 bg-white"
@@ -177,7 +183,7 @@
                             height="60"
                         /> -->
                         </td>
-                        <td id="goaway300" class="bg-transparent">
+                        <td id="goaway300">
                             <img
                                 id="thumb"
                                 src="../static/gif_events.gif"
@@ -186,7 +192,7 @@
                                 height="150"
                             />
                         </td>
-                        <td class="bg-transparent">
+                        <td>
                             <a
                                 class="btn btn-primary d-grid d-flex align-items-center flex-column"
                                 href="http://events.niembro64.com/"
@@ -194,16 +200,14 @@
                                 <!-- <span
                                 ><small><i>Desktop</i></small></span
                             > -->
+
                                 <img
-                                    id="icon"
-                                    class="border border-dark rounded"
-                                    src="../static/party.png"
+                                    src="../static/dmtb.png"
                                     alt="x"
-                                    width="32"
-                                    height="32"
+                                    height="40"
                                 />
 
-                                <span>Events</span>
+                                <span class="ttt">Events</span>
                             </a>
                         </td>
                         <td>
@@ -237,9 +241,9 @@
                                     Events
                                     <ul>
                                         <li>CRUD</li>
-                                        <li>View host</li>
                                         <li>RSVP</li>
-                                        <li>View attendees</li>
+                                        <li>View host</li>
+                                        <li>View RSVPs</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -264,16 +268,15 @@
                     </tr>
 
                     <tr class="align-middle">
-                        <td id="goaway700" class="bg-transparent">
-                            <img src="../static/dmtb.png" alt="x" width="60" />
-                            <!-- <img
-                            id="qr"
-                            class="border border-dark rounded p-1 bg-white"
-                            src="../static/http___pirates.niembro64.com.png"
-                            alt="x"
-                            width="60"
-                            height="60"
-                        /> -->
+                        <td id="goaway500">
+                            <img
+                                id="icon"
+                                class="border border-dark rounded"
+                                src="../static/skull_and_crossbones.png"
+                                alt="x"
+                                width="32"
+                                height="32"
+                            />
                         </td>
                         <td id="goaway300" class="h-150 bg-transparent">
                             <img
@@ -284,7 +287,7 @@
                                 height="150"
                             />
                         </td>
-                        <td class="bg-transparent">
+                        <td>
                             <a
                                 class="btn btn-primary d-grid d-flex align-items-center flex-column"
                                 href="http://pirates.niembro64.com/"
@@ -293,15 +296,12 @@
                                 ><small><i>Mobile</i></small></span
                             > -->
                                 <img
-                                    id="icon"
-                                    class="border border-dark rounded"
-                                    src="../static/skull_and_crossbones.png"
+                                    src="../static/dmtb.png"
                                     alt="x"
-                                    width="32"
-                                    height="32"
+                                    height="40"
                                 />
 
-                                <span>Pirates</span>
+                                <span class="ttt">Pirates</span>
                             </a>
                         </td>
                         <td>
@@ -354,18 +354,17 @@
                         </td>
                     </tr>
                     <tr class="align-middle">
-                        <td id="goaway700" class="bg-transparent">
-                            <img src="../static/mtb.png" alt="x" width="60" />
-                            <!-- <img
-                            id="qr"
-                            class="border border-dark rounded p-1 bg-white"
-                            src="../static/http___shows.niembro64.com.png"
-                            alt="x"
-                            width="60"
-                            height="60"
-                        /> -->
+                        <td id="goaway500">
+                            <img
+                                id="icon"
+                                class="border border-dark rounded"
+                                src="../static/movie.png"
+                                alt="x"
+                                width="32"
+                                height="32"
+                            />
                         </td>
-                        <td id="goaway300" class="bg-transparent">
+                        <td id="goaway300">
                             <img
                                 id="thumb"
                                 src="../static/gif_shows.gif"
@@ -374,7 +373,7 @@
                                 height="150"
                             />
                         </td>
-                        <td class="bg-transparent">
+                        <td>
                             <a
                                 class="btn btn-primary d-grid d-flex align-items-center flex-column"
                                 href="http://shows.niembro64.com/"
@@ -383,15 +382,12 @@
                                 ><small><i>Mobile</i></small></span
                             > -->
                                 <img
-                                    id="icon"
-                                    class="border border-dark rounded"
-                                    src="../static/movie.png"
+                                    src="../static/mtb.png"
                                     alt="x"
-                                    width="32"
-                                    height="32"
+                                    height="40"
                                 />
 
-                                <span>Shows</span>
+                                <span class="ttt">Shows</span>
                                 <!-- <span
                 ><small><i>work in progress</i></small></span
               > -->
@@ -430,7 +426,7 @@
                                         <li>CRUD</li>
                                         <li>View creator</li>
                                         <li>Like</li>
-                                        <li>View like count</li>
+                                        <li>View likes</li>
                                     </ul>
                                 </li>
                             </ul>
