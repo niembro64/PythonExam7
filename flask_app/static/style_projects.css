@@ -137,7 +137,7 @@ tbody > tr {
     height: 3px;
     bottom: 0;
     left: 0;
-    background: rgb(0, 0, 0);
+    background: rgb(13, 110, 253);
     /* visibility: hidden; */
     border-radius: 5px;
     transform: scaleX(0);
