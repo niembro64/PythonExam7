@@ -45,8 +45,11 @@
         </div>
         <div
             id="butnz"
-            class="d-flex align-items-center justify-content-center flex-row"
+            class="d-flex align-items-center justify-content-center flex-row flex-wrap"
         >
+            <div id="goaway500" class="bbb" onclick="growQr(this)">
+                <b><small id="resume">Mobile</small></b>
+            </div>
             <a
                 class="bbb"
                 href="../static/Resume of Eric Michael Niemeyer _ Full Stack Developer _ Stamford CT _ Rev 63-min.pdf"
@@ -69,14 +72,6 @@
             <a class="bbb" href="https://www.linkedin.com/in/eric-niemo/"
                 ><img src="../static/Linkedin-logo-png.png" height="18" alt=""
             /></a>
-            <img
-                id="goaway500"
-                class="border border-dark rounded p-1 mx-3 my-0 bg-white"
-                src="../static/http___niembro64.com.png"
-                alt="x"
-                width="80"
-                height="80"
-            />
         </div>
         <div id="tablediv">
             <table
@@ -88,9 +83,7 @@
                         <th scope="col" id="goaway500" class="text-center"></th>
                         <th id="goaway300" scope="col"></th>
 
-                        <th  class="text-center" scope="col">
-                            Project
-                        </th>
+                        <th class="text-center" scope="col">Project</th>
                         <th scope="col" class="text-center">Stack</th>
 
                         <th id="goaway500" scope="col" class="text-center">
@@ -337,10 +330,7 @@
                             response strategy to screen size. See "About This
                             Project" for more information.
                             <ul>
-                                <li>
-                                    Tap instead of Type
-                                    <small><i>(Mobile-First)</i></small>
-                                </li>
+                                <li>Tap instead of Type</li>
                                 <li>User Guidance with Form Completion</li>
                                 <li>Validations | Front-End & Back-End</li>
                             </ul>
@@ -459,7 +449,18 @@
                 </tbody>
             </table>
         </div>
-
+        <div id="endboy">
+            <p>niemeyer.eric@gmail.com</p>
+            <p>618 616 3380</p>
+        </div>
+        <div  id="mobileqr">
+            <img
+             id="qrqr"
+                src="../static/http___niembro64.com.png"
+                alt="x"
+                onclick="growQr(this)"
+            />
+        </div>
         <div class="endblock"></div>
         <script
             type="text/javascript"
