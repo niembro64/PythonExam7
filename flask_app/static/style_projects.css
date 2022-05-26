@@ -239,8 +239,8 @@ li > ul > li {
 }
 
 #endboy {
-    width: 300px;
-    height: 100px;
+    width: 240px;
+    height: 70px;
     background-color: rgb(226, 227, 229);
     border-radius: 8px;
     border: 2px solid black;
@@ -248,19 +248,62 @@ li > ul > li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 5px; 
 }
 
 #endboy > p {
     font-size: smaller;
     margin: 0px;
     padding: 0px;
-
+    
     user-select: all; /* supported by Chrome and Opera */
     -webkit-user-select: all; /* Safari */
     -khtml-user-select: all; /* Konqueror HTML */
     -moz-user-select: all; /* Firefox */
     -ms-user-select: all; /* Internet Explorer/Edge */
 }
+
+#pagevisits{
+    position: fixed;
+    bottom: 0px; 
+    width: 100%; 
+    height: auto;
+    background-color: rgb(226, 227, 229);
+    border-top: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+
+}
+#pagevisits > span {
+    font-size: small;
+    margin: 0px;
+    padding: 0px;
+    
+    user-select: all; /* supported by Chrome and Opera */
+    -webkit-user-select: all; /* Safari */
+    -khtml-user-select: all; /* Konqueror HTML */
+    -moz-user-select: all; /* Firefox */
+    -ms-user-select: all; /* Internet Explorer/Edge */
+}
+#pagevisits > div > span {
+    font-size: small;
+    margin: 0px;
+    padding: 0px;
+    
+    user-select: all; /* supported by Chrome and Opera */
+    -webkit-user-select: all; /* Safari */
+    -khtml-user-select: all; /* Konqueror HTML */
+    -moz-user-select: all; /* Firefox */
+    -ms-user-select: all; /* Internet Explorer/Edge */
+}
+h4 {
+    padding: 0px;
+    margin: 0px;
+}
+
 
 /* #mobile {
     cursor: pointer;
