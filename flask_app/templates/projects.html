@@ -1,655 +1,610 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-        />
-        <link
-            id="icon"
-            rel="shortcut icon"
-            href="{{ url_for('static', filename='en.png') }}"
-        />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="{{ url_for('static', filename='style_projects.css') }}"
-        />
-        <title>Eric Niemeyer | Projects</title>
-    </head>
-    <body>
-        <div
-            id="top"
-            class="d-flex align-items-center justify-content-center flex-row p-1 m-0"
-        >
-            <div
-                id="glow"
-                class="d-flex align-items-center flex-column p-0 m-0"
-            >
-                <h3>Eric Niemeyer</h3>
-                <span>Full-Stack Projects</span>
-            </div>
-        </div>
-        <div
-            id="butnz"
-            class="d-flex align-items-center justify-content-center flex-row flex-wrap"
-        >
-            <div id="goaway500" class="bbb" onclick="growQr(this)">
-                <b><small id="resume">Mobile</small></b>
-            </div>
-            <a
-                class="bbb"
-                href="../static/Resume of Eric Michael Niemeyer _ Full Stack Developer _ Stamford CT _ Rev 63-min.pdf"
-                download
-            >
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      id="icon"
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='en.png') }}"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style_projects.css') }}"
+    />
+    <title>Eric Niemeyer | Projects</title>
+  </head>
+  <body>
+    <div
+      id="top"
+      class="d-flex align-items-center justify-content-center flex-row p-1 m-0"
+    >
+      <div id="glow" class="d-flex align-items-center flex-column p-0 m-0">
+        <h3>Eric Niemeyer</h3>
+        <span>Full-Stack Projects</span>
+      </div>
+    </div>
+    <div
+      id="butnz"
+      class="d-flex align-items-center justify-content-center flex-row flex-wrap"
+    >
+      <div id="goaway500" class="bbb" onclick="growQr(this)">
+        <b><small id="resume">Mobile</small></b>
+      </div>
+      <a
+        class="bbb"
+        href="../static/Resume of Eric Michael Niemeyer _ Full Stack Developer _ Stamford CT _ Rev 63-min.pdf"
+        download
+      >
+        <img id="qr" src="../static/dl.png" alt="x" width="14" height="14" />
+        <b><small id="resume"> Resume</small></b></a
+      >
+      <a class="bbb" href="https://github.com/niembro64"
+        ><img src="../static/GitHub_Logo.png" height="20" alt=""
+      /></a>
+      <a class="bbb" href="https://www.linkedin.com/in/eric-niemo/"
+        ><img src="../static/Linkedin-logo-png.png" height="18" alt=""
+      /></a>
+    </div>
+    <div id="tablediv">
+      <table
+        id="thhh"
+        class="table table-light table-striped table-hover table-borderless"
+      >
+        <thead class="table text-dark">
+          <tr>
+            <th scope="col" id="goaway500" class="text-center"></th>
+            <th id="goaway300" scope="col"></th>
+            <th class="text-center" scope="col">Project</th>
+            <th scope="col" class="text-center">Stack</th>
+            <th id="goaway500" scope="col" class="text-center">
+              Entities (DB)
+            </th>
+            <th id="goaway700" scope="col" class="text-center">Explanation</th>
+          </tr>
+        </thead>
+        <tbody class="rounded">
+          <tr class="align-middle">
+            <td id="goaway500">
+              <img
+                id="icon"
+                class="border border-dark rounded"
+                src="../static/desktop_icon.png"
+                alt="x"
+                width="32"
+                height="32"
+              />
+            </td>
+            <td id="goaway300" class="h-150 bg-transparent">
+              <div class="thumbHolder">
                 <img
-                    id="qr"
-                    src="../static/dl.png"
-                    alt="x"
-                    width="14"
-                    height="14"
+                  id="thumb"
+                  src="../static/gif_design.gif"
+                  class="border border-dark rounded"
+                  alt="x"
+                  height="150"
                 />
-                <b><small id="resume"> Resume</small></b></a
-            >
-            <a class="bbb" href="https://github.com/niembro64"
-                ><img src="../static/GitHub_Logo.png" height="20" alt=""
-            /></a>
-            <a class="bbb" href="https://www.linkedin.com/in/eric-niemo/"
-                ><img src="../static/Linkedin-logo-png.png" height="18" alt=""
-            /></a>
-        </div>
-        <div id="tablediv">
-            <table
-                id="thhh"
-                class="table table-light table-striped table-hover table-borderless"
-            >
-                <thead class="table text-dark">
-                    <tr>
-                        <th scope="col" id="goaway500" class="text-center"></th>
-                        <th id="goaway300" scope="col"></th>
-                        <th class="text-center" scope="col">Project</th>
-                        <th scope="col" class="text-center">Stack</th>
-                        <th id="goaway500" scope="col" class="text-center">
-                            Entities (DB)
-                        </th>
-                        <th id="goaway700" scope="col" class="text-center">
-                            Explanation
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="rounded">
-                    <tr class="align-middle">
-                        <td id="goaway500">
-                            <img
-                                id="icon"
-                                class="border border-dark rounded"
-                                src="../static/desktop_icon.png"
-                                alt="x"
-                                width="32"
-                                height="32"
-                            />
-                        </td>
-                        <td id="goaway300" class="h-150 bg-transparent">
-                            <div class="thumbHolder">
-                                <img
-                                    id="thumb"
-                                    src="../static/gif_design.gif"
-                                    class="border border-dark rounded"
-                                    alt="x"
-                                    height="150"
-                                />
-                            </div>
-                        </td>
-                        <td>
-                            <a
-                                class="btn btn-primary d-grid d-flex align-items-center flex-column"
-                                href="http://design.niembro64.com/"
-                            >
-                                <img
-                                    src="../static/dtb.png"
-                                    alt="x"
-                                    height="40"
-                                />
-                                <span class="ttt">Design</span>
-                            </a>
-                        </td>
-                        <td>
-                            <div
-                                class="d-flex align-items-center justify-content-center py-2"
-                                width="60"
-                            >
-                                <img
-                                    src="../static/html_css_js.png"
-                                    class="rounded"
-                                    alt="x"
-                                    width="50"
-                                />
-                            </div>
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </td>
-                        <td id="goaway500">
-                            <ul>
-                                <small></small>
-                            </ul>
-                        </td>
-                        <td id="goaway700">
-                            <span>
-                                Front-end exercises in the web standard.
-                            </span>
-                            <ul>
-                                <li>HTML5</li>
-                                <li>Modern CSS</li>
-                                <li>Vanilla JS</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr class="align-middle">
-                        <td id="goaway500">
-                            <img
-                                id="icon"
-                                class="border border-dark rounded"
-                                src="../static/skull_and_crossbones.png"
-                                alt="x"
-                                width="32"
-                                height="32"
-                            />
-                        </td>
-                        <td id="goaway300" class="h-150">
-                            <div class="thumbHolder">
-                                <img
-                                    id="thumb"
-                                    src="../static/gif_pirates.gif"
-                                    class="border border-dark rounded"
-                                    alt="x"
-                                    height="150"
-                                />
-                            </div>
-                        </td>
-                        <td>
-                            <a
-                                class="btn btn-primary d-grid d-flex align-items-center flex-column"
-                                href="http://pirates.niembro64.com/"
-                            >
-                                <img
-                                    src="../static/dtb.png"
-                                    alt="x"
-                                    height="40"
-                                />
-                                <span class="ttt">Pirates</span>
-                            </a>
-                        </td>
-                        <td>
-                            <div
-                                class="d-flex align-items-center justify-content-center py-2"
-                            >
-                                <img
-                                    src="../static/react.png"
-                                    class="rounded"
-                                    alt="x"
-                                    width="50"
-                                />
-                            </div>
-                            <ul>
-                                <li>React</li>
-                                <li>Express</li>
-                                <li>MongoDB</li>
-                            </ul>
-                        </td>
-                        <td id="goaway500">
-                            <ul>
-                                <li>
-                                    Pirates
-                                    <ul>
-                                        <li>CRUD</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </td>
-                        <td id="goaway700">
-                            An exercise in user experience.
-                            <ul>
-                                <li>
-                                    Validations on Front-End for User Experience
-                                </li>
-                                <li>
-                                    Validations on Back-End for Data Integrity
-                                </li>
-                                <li>Elegant Response to Device Size</li>
-                            </ul>
-                            <div class="thumbHolder2">
-                                <img
-                                    id="thumb2"
-                                    src="../static/mongo_schema.png"
-                                    class="border border-dark rounded"
-                                    height="60"
-                                    alt=""
-                                />
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="align-middle">
-                        <td id="goaway500">
-                            <img
-                                id="icon"
-                                class="border border-dark rounded"
-                                src="../static/party.png"
-                                alt="x"
-                                width="32"
-                                height="32"
-                            />
-                        </td>
-                        <td id="goaway300">
-                            <div class="thumbHolder">
-                                <img
-                                    id="thumb"
-                                    src="../static/gif_events.gif"
-                                    class="border border-dark rounded"
-                                    alt="x"
-                                    height="150"
-                                />
-                            </div>
-                        </td>
-                        <td>
-                            <a
-                                class="btn btn-primary d-grid d-flex align-items-center flex-column"
-                                href="http://events.niembro64.com/"
-                            >
-                                <!-- <span
+              </div>
+            </td>
+            <td>
+              <a
+                class="btn btn-primary d-grid d-flex align-items-center flex-column"
+                href="http://design.niembro64.com/"
+              >
+                <img src="../static/dtb.png" alt="x" height="40" />
+                <span class="ttt">Design</span>
+              </a>
+            </td>
+            <td>
+              <div
+                class="d-flex align-items-center justify-content-center py-2"
+                width="60"
+              >
+                <img
+                  src="../static/html_css_js.png"
+                  class="rounded"
+                  alt="x"
+                  width="50"
+                />
+              </div>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </td>
+            <td id="goaway500">
+              <ul>
+                <small></small>
+              </ul>
+            </td>
+            <td id="goaway700">
+              <span> Front-end exercises in the web standard. </span>
+              <ul>
+                <li>HTML5</li>
+                <li>Modern CSS</li>
+                <li>Vanilla JS</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td id="goaway500">
+              <img
+                id="icon"
+                class="border border-dark rounded"
+                src="../static/skull_and_crossbones.png"
+                alt="x"
+                width="32"
+                height="32"
+              />
+            </td>
+            <td id="goaway300" class="h-150">
+              <div class="thumbHolder">
+                <img
+                  id="thumb"
+                  src="../static/gif_pirates.gif"
+                  class="border border-dark rounded"
+                  alt="x"
+                  height="150"
+                />
+              </div>
+            </td>
+            <td>
+              <a
+                class="btn btn-primary d-grid d-flex align-items-center flex-column"
+                href="http://pirates.niembro64.com/"
+              >
+                <img src="../static/dtb.png" alt="x" height="40" />
+                <span class="ttt">Pirates</span>
+              </a>
+            </td>
+            <td>
+              <div
+                class="d-flex align-items-center justify-content-center py-2"
+              >
+                <img
+                  src="../static/react.png"
+                  class="rounded"
+                  alt="x"
+                  width="50"
+                />
+              </div>
+              <ul>
+                <li>React</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+              </ul>
+            </td>
+            <td id="goaway500">
+              <ul>
+                <li>
+                  Pirates
+                  <ul>
+                    <li>CRUD</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td id="goaway700">
+              An exercise in user experience.
+              <ul>
+                <li>Validations on Front-End for User Experience</li>
+                <li>Validations on Back-End for Data Integrity</li>
+                <li>Elegant Response to Device Size</li>
+              </ul>
+              <div class="thumbHolder2">
+                <img
+                  id="thumb2"
+                  src="../static/mongo_schema.png"
+                  class="border border-dark rounded"
+                  height="60"
+                  alt=""
+                />
+              </div>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td id="goaway500">
+              <img
+                id="icon"
+                class="border border-dark rounded"
+                src="../static/party.png"
+                alt="x"
+                width="32"
+                height="32"
+              />
+            </td>
+            <td id="goaway300">
+              <div class="thumbHolder">
+                <img
+                  id="thumb"
+                  src="../static/gif_events.gif"
+                  class="border border-dark rounded"
+                  alt="x"
+                  height="150"
+                />
+              </div>
+            </td>
+            <td>
+              <a
+                class="btn btn-primary d-grid d-flex align-items-center flex-column"
+                href="http://events.niembro64.com/"
+              >
+                <!-- <span
                                 ><small><i>Desktop</i></small></span
                             > -->
 
-                                <img
-                                    src="../static/dmtb.png"
-                                    alt="x"
-                                    height="40"
-                                />
+                <img src="../static/dmtb.png" alt="x" height="40" />
 
-                                <span class="ttt">Events</span>
-                            </a>
-                        </td>
-                        <td>
-                            <div
-                                class="d-flex align-items-center justify-content-center py-2"
-                            >
-                                <img
-                                    src="../static/csharp.png"
-                                    class="rounded"
-                                    alt="x"
-                                    width="50"
-                                />
-                            </div>
-                            <ul>
-                                <li>C#</li>
-                                <li>ASP.NET</li>
-                                <li>SQL</li>
-                            </ul>
-                        </td>
-                        <td id="goaway500">
-                            <ul>
-                                <li>
-                                    Accounts
-                                    <ul>
-                                        <li>Register</li>
-                                        <li>Log-in</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Events
-                                    <ul>
-                                        <li>CRUD</li>
-                                        <li>RSVP</li>
-                                        <li>View host</li>
-                                        <li>View RSVPs</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </td>
-                        <td id="goaway700">
-                            An exercise in back-end tidiness.
+                <span class="ttt">Events</span>
+              </a>
+            </td>
+            <td>
+              <div
+                class="d-flex align-items-center justify-content-center py-2"
+              >
+                <img
+                  src="../static/csharp.png"
+                  class="rounded"
+                  alt="x"
+                  width="50"
+                />
+              </div>
+              <ul>
+                <li>C#</li>
+                <li>ASP.NET</li>
+                <li>SQL</li>
+              </ul>
+            </td>
+            <td id="goaway500">
+              <ul>
+                <li>
+                  Accounts
+                  <ul>
+                    <li>Register</li>
+                    <li>Log-in</li>
+                  </ul>
+                </li>
+                <li>
+                  Events
+                  <ul>
+                    <li>CRUD</li>
+                    <li>RSVP</li>
+                    <li>View host</li>
+                    <li>View RSVPs</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td id="goaway700">
+              An exercise in back-end tidiness.
 
-                            <ul>
-                                <li>EF Core LINQ ORM (SQL)</li>
-                                <li>Validations | .Net-Standard & Custom</li>
-                                <li>.Net-Core-Identity-Encrypted Passwords</li>
-                            </ul>
-                            <div class="thumbHolder2">
-                                <img
-                                    id="thumb2"
-                                    src="../static/erd_events.png"
-                                    class="border border-dark rounded"
-                                    height="60"
-                                    alt=""
-                                />
-                            </div>
-                        </td>
-                    </tr>
+              <ul>
+                <li>EF Core LINQ ORM (SQL)</li>
+                <li>Validations | .Net-Standard & Custom</li>
+                <li>.Net-Core-Identity-Encrypted Passwords</li>
+              </ul>
+              <div class="thumbHolder2">
+                <img
+                  id="thumb2"
+                  src="../static/erd_events.png"
+                  class="border border-dark rounded"
+                  height="60"
+                  alt=""
+                />
+              </div>
+            </td>
+          </tr>
 
-                    <tr class="align-middle">
-                        <td id="goaway500">
-                            <img
-                                id="icon"
-                                class="border border-dark rounded"
-                                src="../static/movie.png"
-                                alt="x"
-                                width="32"
-                                height="32"
-                            />
-                        </td>
-                        <td id="goaway300">
-                            <div class="thumbHolder">
-                                <img
-                                    id="thumb"
-                                    src="../static/gif_shows.gif"
-                                    class="border border-dark rounded"
-                                    alt="x"
-                                    height="150"
-                                />
-                            </div>
-                        </td>
-                        <td>
-                            <a
-                                class="btn btn-primary d-grid d-flex align-items-center flex-column"
-                                href="http://shows.niembro64.com/"
-                            >
-                                <!-- <span
+          <tr class="align-middle">
+            <td id="goaway500">
+              <img
+                id="icon"
+                class="border border-dark rounded"
+                src="../static/movie.png"
+                alt="x"
+                width="32"
+                height="32"
+              />
+            </td>
+            <td id="goaway300">
+              <div class="thumbHolder">
+                <img
+                  id="thumb"
+                  src="../static/gif_shows.gif"
+                  class="border border-dark rounded"
+                  alt="x"
+                  height="150"
+                />
+              </div>
+            </td>
+            <td>
+              <a
+                class="btn btn-primary d-grid d-flex align-items-center flex-column"
+                href="http://shows.niembro64.com/"
+              >
+                <!-- <span
                                 ><small><i>Mobile</i></small></span
                             > -->
-                                <img
-                                    src="../static/mtb.png"
-                                    alt="x"
-                                    height="40"
-                                />
+                <img src="../static/mtb.png" alt="x" height="40" />
 
-                                <span class="ttt">Shows</span>
-                                <!-- <span
+                <span class="ttt">Shows</span>
+                <!-- <span
                 ><small><i>work in progress</i></small></span
               > -->
-                            </a>
-                        </td>
-                        <td>
-                            <div
-                                class="d-flex align-items-center justify-content-center py-2"
-                            >
-                                <img
-                                    src="../static/python.png"
-                                    class="rounded"
-                                    alt="x"
-                                    width="40"
-                                />
-                            </div>
-                            <ul>
-                                <li>Python</li>
-                                <li>Flask</li>
-                                <li>SQL</li>
-                            </ul>
-                        </td>
-                        <td id="goaway500">
-                            <ul>
-                                <li>
-                                    Accounts
-                                    <ul>
-                                        <li>Register</li>
-                                        <li>Log-in</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Shows
-                                    <ul>
-                                        <li>CRUD</li>
-                                        <li>View creator</li>
-                                        <li>Like</li>
-                                        <li>View likes</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </td>
-                        <td id="goaway700">
-                            An exercise in code simplicity.
-                            <ul>
-                                <!-- <li>
+              </a>
+            </td>
+            <td>
+              <div
+                class="d-flex align-items-center justify-content-center py-2"
+              >
+                <img
+                  src="../static/python.png"
+                  class="rounded"
+                  alt="x"
+                  width="40"
+                />
+              </div>
+              <ul>
+                <li>Python</li>
+                <li>Flask</li>
+                <li>SQL</li>
+              </ul>
+            </td>
+            <td id="goaway500">
+              <ul>
+                <li>
+                  Accounts
+                  <ul>
+                    <li>Register</li>
+                    <li>Log-in</li>
+                  </ul>
+                </li>
+                <li>
+                  Shows
+                  <ul>
+                    <li>CRUD</li>
+                    <li>View creator</li>
+                    <li>Like</li>
+                    <li>View likes</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+            <td id="goaway700">
+              An exercise in code simplicity.
+              <ul>
+                <!-- <li>
                 Users-Shows Double Relationship
                 <ul>
                   <li>Create is <i>One-to-Many</i></li>
                   <li>Like is <i>Many-to-Many</i></li>
                 </ul>
               </li> -->
-                                <li>Query String Composition Method (SQL)</li>
-                                <li>Validations on Back-End & Session</li>
-                                <li>Bcrypt-Encrypted Passwords</li>
-                            </ul>
-                            <div class="thumbHolder2">
-                                <img
-                                    id="thumb2"
-                                    src="../static/erd_shows.png"
-                                    class="border border-dark rounded"
-                                    height="60"
-                                    alt=""
-                                />
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="align-middle">
-                        <td id="goaway500">
-                            <img
-                                id="icon"
-                                class="border border-dark rounded"
-                                src="../static/NA.png"
-                                alt="x"
-                                width="32"
-                                height="32"
-                            />
-                        </td>
-                        <td id="goaway300">
-                            <div class="thumbHolder">
-                                <img
-                                    id="thumb"
-                                    src="../static/media.gif"
-                                    class="border border-dark rounded"
-                                    alt="x"
-                                    height="150"
-                                />
-                            </div>
-                        </td>
-                        <td>
-                            <a
-                                class="btn btn-primary d-grid d-flex align-items-center flex-column"
-                                href="http://media.niembro64.com/wordpress/"
-                            >
-                                <img
-                                    src="../static/dmtb.png"
-                                    alt="x"
-                                    height="40"
-                                />
-
-                                <span class="ttt">Media</span>
-                            </a>
-                        </td>
-                        <td>
-                            <div
-                                class="d-flex align-items-center justify-content-center py-2"
-                            >
-                                <img
-                                    src="../static/wordpress.png"
-                                    class="rounded"
-                                    alt="x"
-                                    width="40"
-                                />
-                            </div>
-                            <ul>
-                                <li>WordPress</li>
-                                <li>CloudFlare</li>
-                                <li>Synology</li>
-                            </ul>
-                        </td>
-                        <td id="goaway500">
-                            <ul></ul>
-                        </td>
-                        <td id="goaway700">
-                            A showcase of original art.
-                            <ul>
-                                <li>Classical Music</li>
-                                <li>Electronic Music</li>
-                                <li>Visual Art</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr class="align-middle">
-                        <td id="goaway500">
-                            <img
-                                id="icon"
-                                class="border border-dark rounded"
-                                src="../static/qblack.png"
-                                alt="x"
-                                width="32"
-                                height="32"
-                            />
-                        </td>
-                        <td id="goaway300">
-                            <div class="thumbHolder"></div>
-                        </td>
-                        <td>
-                            <a
-                                class="btn btn-primary d-grid d-flex align-items-center flex-column"
-                                href="http://game.niembro64.com/"
-                            >
-                                <img
-                                    src="../static/dtb.png"
-                                    alt="x"
-                                    height="40"
-                                />
-
-                                <span class="ttt">Game</span>
-                            </a>
-                        </td>
-                        <td>
-                            <div
-                                class="d-flex align-items-center justify-content-center py-2"
-                            >
-                                <img
-                                    src="../static/p3.png"
-                                    class="rounded"
-                                    alt="x"
-                                    width="100"
-                                />
-                            </div>
-                            <ul>
-                                <li>Phaser 3</li>
-                                <li>Javascript</li>
-                            </ul>
-                        </td>
-                        <td id="goaway500">
-                            <ul></ul>
-                        </td>
-                        <td id="goaway700">
-                            A spot to showcase HTML5 gaming.
-                            <ul>
-                                <li>Keyboard Controlls</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr class="align-middle">
-                        <td id="goaway500">
-                            <img
-                                id="icon"
-                                class="border border-dark rounded"
-                                src="../static/controller.png"
-                                alt="x"
-                                width="32"
-                                height="32"
-                            />
-                        </td>
-                        <td id="goaway300">
-                            <div class="thumbHolder"></div>
-                        </td>
-                        <td>
-                            <a
-                                class="btn btn-primary d-grid d-flex align-items-center flex-column"
-                                href="http://smashed.niembro64.com/"
-                            >
-                                <img
-                                    src="../static/dmtb.png"
-                                    alt="x"
-                                    height="40"
-                                />
-
-                                <span class="ttt">Smashed</span>
-                            </a>
-                        </td>
-                        <td>
-                            <div
-                                class="d-flex align-items-center justify-content-center py-2"
-                            >
-                                <img
-                                    src="../static/table.png"
-                                    class="rounded"
-                                    alt="x"
-                                    width="100"
-                                />
-                            </div>
-                            <ul>
-                                <li>Phaser 3</li>
-                                <li>Typescript</li>
-                                <li>React</li>
-                            </ul>
-                        </td>
-                        <td id="goaway500">
-                            <ul></ul>
-                        </td>
-                        <td id="goaway700">
-                            A spot to showcase HTML5 gaming.
-                            <ul>
-                                <li>Super NES Controllers</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="endboy">
-            <p>Eric Niemeyer</p>
-            <p>niemeyer.eric@gmail.com</p>
-            <p>618 616 3380</p>
-        </div>
-        <div id="pagevisits">
-            <div>
-                <span>Client Visits:</span>
-                <span id="visits"></span>
-            </div>
-            <div><span id="ip"></span></div>
-            <div>
-                <span id="city"></span>
-            </div>
-        </div>
-
-        <div id="mobileqr">
-            <img
-                id="qrqr"
-                src="../static/http___niembro64.com.png"
+                <li>Query String Composition Method (SQL)</li>
+                <li>Validations on Back-End & Session</li>
+                <li>Bcrypt-Encrypted Passwords</li>
+              </ul>
+              <div class="thumbHolder2">
+                <img
+                  id="thumb2"
+                  src="../static/erd_shows.png"
+                  class="border border-dark rounded"
+                  height="60"
+                  alt=""
+                />
+              </div>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td id="goaway500">
+              <img
+                id="icon"
+                class="border border-dark rounded"
+                src="../static/NA.png"
                 alt="x"
-                onclick="growQr(this)"
-            />
-        </div>
+                width="32"
+                height="32"
+              />
+            </td>
+            <td id="goaway300">
+              <div class="thumbHolder">
+                <img
+                  id="thumb"
+                  src="../static/media.gif"
+                  class="border border-dark rounded"
+                  alt="x"
+                  height="150"
+                />
+              </div>
+            </td>
+            <td>
+              <a
+                class="btn btn-primary d-grid d-flex align-items-center flex-column"
+                href="http://media.niembro64.com/wordpress/"
+              >
+                <img src="../static/dmtb.png" alt="x" height="40" />
 
-        <div class="endblock"></div>
-        <script
-            type="text/javascript"
-            language="javascript"
-            src="../static/script.js"
-        ></script>
-    </body>
+                <span class="ttt">Media</span>
+              </a>
+            </td>
+            <td>
+              <div
+                class="d-flex align-items-center justify-content-center py-2"
+              >
+                <img
+                  src="../static/wordpress.png"
+                  class="rounded"
+                  alt="x"
+                  width="40"
+                />
+              </div>
+              <ul>
+                <li>WordPress</li>
+                <li>CloudFlare</li>
+                <li>Synology</li>
+              </ul>
+            </td>
+            <td id="goaway500">
+              <ul></ul>
+            </td>
+            <td id="goaway700">
+              A showcase of original art.
+              <ul>
+                <li>Classical Music</li>
+                <li>Electronic Music</li>
+                <li>Visual Art</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td id="goaway500">
+              <img
+                id="icon"
+                class="border border-dark rounded"
+                src="../static/qblack.png"
+                alt="x"
+                width="32"
+                height="32"
+              />
+            </td>
+            <td id="goaway300">
+              <div class="thumbHolder"></div>
+            </td>
+            <td>
+              <a
+                class="btn btn-primary d-grid d-flex align-items-center flex-column"
+                href="http://game.niembro64.com/"
+              >
+                <img src="../static/dtb.png" alt="x" height="40" />
+
+                <span class="ttt">Game</span>
+              </a>
+            </td>
+            <td>
+              <div
+                class="d-flex align-items-center justify-content-center py-2"
+              >
+                <img
+                  src="../static/p3.png"
+                  class="rounded"
+                  alt="x"
+                  width="100"
+                />
+              </div>
+              <ul>
+                <li>Phaser 3</li>
+                <li>Javascript</li>
+              </ul>
+            </td>
+            <td id="goaway500">
+              <ul></ul>
+            </td>
+            <td id="goaway700">
+              A spot to showcase HTML5 gaming.
+              <ul>
+                <li>Keyboard Controlls</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="align-middle">
+            <td id="goaway500">
+              <img
+                id="icon"
+                class="border border-dark rounded"
+                src="../static/controller.png"
+                alt="x"
+                width="32"
+                height="32"
+              />
+            </td>
+            <td id="goaway300">
+              <div class="thumbHolder"></div>
+            </td>
+            <td>
+              <a
+                class="btn btn-primary d-grid d-flex align-items-center flex-column"
+                href="http://smashed.niembro64.com/"
+              >
+                <img src="../static/dmtb.png" alt="x" height="40" />
+
+                <span class="ttt">Smashed</span>
+              </a>
+            </td>
+            <td>
+              <div
+                class="d-flex align-items-center justify-content-center py-2"
+              >
+                <img
+                  src="../static/table.png"
+                  class="rounded"
+                  alt="x"
+                  width="100"
+                />
+              </div>
+              <ul>
+                <li>Phaser 3</li>
+                <li>Typescript</li>
+                <li>React</li>
+              </ul>
+            </td>
+            <td id="goaway500">
+              <ul></ul>
+            </td>
+            <td id="goaway700">
+              A spot to showcase HTML5 gaming.
+              <ul>
+                <li>Super NES Controllers</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="endboy">
+      <p>Eric Niemeyer</p>
+      <p>niemeyer.eric@gmail.com</p>
+      <p>618 616 3380</p>
+    </div>
+    <div id="pagevisits">
+      <div>
+        <span>Client Visits:</span>
+        <span id="visits"></span>
+      </div>
+      <div><span id="ip"></span></div>
+      <div>
+        <span id="city"></span>
+      </div>
+    </div>
+
+    <div id="mobileqr">
+      <img
+        id="qrqr"
+        src="../static/http___niembro64.com.png"
+        alt="x"
+        onclick="growQr(this)"
+      />
+    </div>
+
+    <div class="endblock"></div>
+    <script
+      type="text/javascript"
+      language="javascript"
+      src="../static/script.js"
+    ></script>
+  </body>
 </html>
