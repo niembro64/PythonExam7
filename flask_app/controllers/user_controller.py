@@ -10,11 +10,11 @@ from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
 
 
-@app.route("/projects")
-def start():
-    m = "root"
-    User.p(m)
-    return render_template("projects.html")
+# @app.route("/projects")
+# def start():
+#     m = "root"
+#     User.p(m)
+#     return render_template("projects.html")
 
 
 @app.route("/")
