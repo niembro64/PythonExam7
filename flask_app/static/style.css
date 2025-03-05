@@ -163,7 +163,7 @@ body {
   box-shadow: none;
 }
 
-/* Add validation message styling */
+/* Update validation message styling */
 .validation-message {
   display: none;
   color: var(--danger);
@@ -171,7 +171,8 @@ body {
   margin-top: 0.25rem;
 }
 
-.form-control:invalid:not(:placeholder-shown) + .validation-message {
+/* Only show validation when field has been touched and is invalid */
+.form-control.was-touched:invalid + .validation-message {
   display: block;
 }
 

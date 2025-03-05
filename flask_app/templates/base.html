@@ -41,5 +41,21 @@
     <main class="container py-4">
         {% block content %}{% endblock %}
     </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add blur event listener to all form inputs
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('blur', function() {
+                this.classList.add('was-touched');
+            });
+            
+            // Remove was-touched class when user starts typing again
+            input.addEventListener('focus', function() {
+                this.classList.remove('was-touched');
+            });
+        });
+    });
+    </script>
 </body>
 </html> 
