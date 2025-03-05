@@ -44,12 +44,11 @@ body {
   background: var(--surface);
   border-radius: 12px;
   box-shadow: var(--shadow-md);
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: box-shadow 0.2s;
   overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -89,9 +88,13 @@ body {
 }
 
 .table td {
-  padding: var(--spacing-md);
+  padding: 0;
   border-bottom: 1px solid var(--border);
   vertical-align: middle;
+}
+
+.table tr:hover {
+  background-color: rgba(37, 99, 235, 0.05);
 }
 
 .table tr:last-child td {
@@ -142,16 +145,33 @@ body {
   padding: 0.75rem 1rem;
   border: 1px solid var(--border);
   border-radius: 8px;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
   font-size: 1rem;
   background-color: var(--background);
 }
 
 .form-control:focus {
-  outline: none;
+  background-color: var(--surface);
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
-  background-color: var(--surface);
+}
+
+/* Only show validation styling after user interaction */
+.form-control:not(:placeholder-shown):invalid {
+  border-color: var(--danger);
+  box-shadow: none;
+}
+
+.form-control:not(:placeholder-shown):invalid:focus {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Helper text styling */
+.form-text {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 0.25rem;
 }
 
 /* Navigation */
@@ -178,13 +198,13 @@ body {
   border: none;
   font-size: 1.25rem;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: background-color 0.2s;
   padding: 0.5rem;
   border-radius: 50%;
+  margin: var(--spacing-sm) 0;
 }
 
 .like-btn:hover {
-  transform: scale(1.2);
   background: rgba(239, 68, 68, 0.1);
 }
 
@@ -318,6 +338,7 @@ body.auth-page .navbar {
   border: none;
   border-radius: 8px;
   font-size: 0.875rem;
+  margin-bottom: 1rem;
 }
 
 .alert-danger {
@@ -325,32 +346,12 @@ body.auth-page .navbar {
   color: var(--danger);
 }
 
-/* Form validation styling */
-.form-control:invalid {
-  border-color: var(--danger);
-  box-shadow: none;
-}
-
-.form-control:invalid:focus {
-  border-color: var(--danger);
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-}
-
-/* Card hover effect */
-.card {
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
 /* Add these button group styles */
 .btn-group {
   display: inline-flex;
   border-radius: 8px;
   overflow: hidden;
+  margin: var(--spacing-sm) 0;
 }
 
 .btn-group .btn:first-child {
@@ -374,12 +375,23 @@ body.auth-page .navbar {
 
 /* Update title link styling */
 .title-link {
-  display: flex;
-  align-items: center;
-  min-height: 40px;
+  display: block;
+  padding: var(--spacing-md) var(--spacing-lg);
   color: var(--text);
+  text-decoration: none;
+  height: 100%;
 }
 
 .title-link:hover {
-  color: var(--primary);
+  color: var(--text);
+}
+
+/* Remove padding from title cell since it's in the link now */
+.table td.title-cell {
+  padding: 0;
+}
+
+/* Center columns */
+.table td.text-center {
+  padding: 0 var(--spacing-md);
 }

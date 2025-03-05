@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Login{% endblock %}
+{% block title %}TV Shows - Login & Registration{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">
@@ -10,11 +10,22 @@
             <form action="/login_user" method="POST">
                 <div class="form-group mb-3">
                     <label for="l_email">Email</label>
-                    <input type="email" name="l_email" class="form-control" required />
+                    <input type="email" 
+                           name="l_email" 
+                           class="form-control" 
+                           required 
+                           placeholder="johndoe@gmail.com"
+                           value="johndoe@gmail.com" />
+                    <div class="form-text text-muted">Demo account credentials provided</div>
                 </div>
                 <div class="form-group mb-3">
                     <label for="l_password">Password</label>
-                    <input type="password" name="l_password" class="form-control" required />
+                    <input type="password" 
+                           name="l_password" 
+                           class="form-control" 
+                           required 
+                           placeholder="password"
+                           value="password" />
                 </div>
                 {% with messages = get_flashed_messages() %}
                     {% if messages %}
