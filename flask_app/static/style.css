@@ -66,6 +66,7 @@ body {
   max-width: 100%;
   margin-bottom: 0;
   background: var(--surface);
+  table-layout: fixed;
 }
 
 .table th {
@@ -382,22 +383,46 @@ body.auth-page .navbar {
   overflow-x: hidden;
 }
 
-/* Update title link styling */
+/* Update title cell and link styling */
+.table td.title-cell {
+  padding: 0;
+  width: 100%;
+  max-width: 0;
+}
+
 .title-link {
   display: block;
   padding: var(--spacing-md) var(--spacing-lg);
   color: var(--text);
   text-decoration: none;
   height: 100%;
+  white-space: normal;
 }
 
 .title-link:hover {
   color: var(--text);
 }
 
-/* Remove padding from title cell since it's in the link now */
-.table td.title-cell {
-  padding: 0;
+/* Update the text span inside the link */
+.title-link .text-break {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+/* Define specific column widths */
+.table th:first-child {
+  width: auto;
+}
+
+.table th.like-column {
+  width: 100px;
+}
+
+.table th.creator-column {
+  width: 150px;
 }
 
 /* Center columns */
