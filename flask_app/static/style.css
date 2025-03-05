@@ -156,15 +156,23 @@ body {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-/* Only show validation styling after user interaction */
-.form-control:not(:placeholder-shown):invalid {
-  border-color: var(--danger);
+/* Remove the invalid styling */
+.form-control:not(:placeholder-shown):invalid,
+.form-control:not(:placeholder-shown):invalid:focus {
+  border-color: var(--border);
   box-shadow: none;
 }
 
-.form-control:not(:placeholder-shown):invalid:focus {
-  border-color: var(--danger);
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+/* Add validation message styling */
+.validation-message {
+  display: none;
+  color: var(--danger);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-control:invalid:not(:placeholder-shown) + .validation-message {
+  display: block;
 }
 
 /* Helper text styling */
