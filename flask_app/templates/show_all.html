@@ -69,7 +69,6 @@
         <tr class="head">
           <th>Title</th>
           <th>Like</th>
-          <th>View</th>
           <th><p class="text-center p-0 m-0">Creator</p></th>
         </tr>
       </thead>
@@ -77,13 +76,12 @@
         {% for show in all_shows %}
         <tr>
           <td class="align-middle">
-            <span id="title" class="text-break" style="min-width: 66px"
-              >{{show.title}}</span
-            >
+            <a href="/show_one/{{show.id}}" class="btn btn-link text-dark text-decoration-none">
+              <span id="title" class="text-break" style="min-width: 66px">{{show.title}}</span>
+            </a>
           </td>
 
           <td class="align-middle">
-            <!-- {% if show.user_id != session['user_id'] %} -->
             <div class="like">
               {% if show.like == 0 %}
               <form action="/fun_like_show/{{show.id}}" method="POST">
@@ -105,14 +103,6 @@
               </form>
               {% endif %}
             </div>
-            <!-- {% endif %} -->
-          </td>
-          <td class="align-middle">
-            <div class="mod">
-              <form action="/show_one/{{show.id}}">
-                <input class="btn btn-warning mx-0" type="submit" value="👓" />
-              </form>
-            </div>
           </td>
           <td class="text-center align-middle">
             {% if show.user_id == session['user_id'] %}{% endif %} {% if
@@ -120,7 +110,6 @@
 
             <div class="btn-group" role="group">
               {% if show.user_id == session['user_id'] %}
-
               <div class="mod">
                 <form action="/edit_one/{{show.id}}">
                   <input class="btn btn-success mx-0" type="submit" value="✎" />
