@@ -119,11 +119,13 @@ class Show:
 
     @classmethod
     def delete_show(cls, data):
-        m = "delete_show"
-        Show.p(m)  
-        query = "DELETE FROM shows WHERE id = %(id)s;"
-        new_id = connectToMySQL(db_name).query_db(query, data)
-        return new_id
+        # First delete all likes associated with this show
+        query1 = "DELETE FROM likes WHERE show_id = %(id)s;"
+        connectToMySQL(db_name).query_db(query1, data)
+        
+        # Then delete the show itself
+        query2 = "DELETE FROM shows WHERE id = %(id)s;"
+        return connectToMySQL(db_name).query_db(query2, data)
 
     @classmethod
     def like_show(cls, data):
